@@ -15,7 +15,7 @@
                     <div class="col-xl-4 col-md-6 col-lg-4 ">
                         <div class="footer_widget">
                             <div class="footer_logo">
-                                <a href="#">
+                                <a href="${contextPath }/index.html">
                                     <img src="${contextPath }/resources/bootstrap/img/footer_logo.png" alt="">
                                 </a>
                             </div>

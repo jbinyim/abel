@@ -49,6 +49,11 @@ public class MemberController {
 		return new ResponseEntity<String>(memberService.checkDuplicatedId(memberId) , HttpStatus.OK);
 	}
 	
+	@RequestMapping(value="/login" , method=RequestMethod.GET)
+	public ModelAndView login() throws Exception{
+		return new ModelAndView("member/login");
+	}
+	
 	
 
 }
