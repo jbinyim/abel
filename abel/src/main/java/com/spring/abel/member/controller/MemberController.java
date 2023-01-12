@@ -1,6 +1,7 @@
 package com.spring.abel.member.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.abel.member.dto.MemberDto;
@@ -52,6 +54,31 @@ public class MemberController {
 	@RequestMapping(value="/login" , method=RequestMethod.GET)
 	public ModelAndView login() throws Exception{
 		return new ModelAndView("member/login");
+	}
+	
+	@RequestMapping(value="/login" , method=RequestMethod.POST)
+	public @ResponseBody String login (MemberDto memberDto , HttpServletRequest request) throws Exception{
+		
+		String message = "";
+		if (memberService.login(memberDto)) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("memberId", memberDto.getMemberId());
+			
+			message = "<script>";
+			message += "alert('로그인 되었습니다.');";
+			message += " location.href='" + request.getContextPath() + "/';";
+			message += " </script>";
+		}
+		else {
+			message  = "<script>";
+			message += " alert('로그인에 실패하였습니다. 아이디와 비밀번호를 확인하세요.');";
+			message += " history.go(-1);";
+			message += " </script>";
+		}
+		
+		return message;
+		
 	}
 	
 	

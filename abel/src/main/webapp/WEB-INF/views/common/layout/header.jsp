@@ -65,7 +65,7 @@
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="elements.html">elements</a></li>
-                                                <li><a href="Cause.html">Cause</a></li>
+                                                <li><a href="${contextPath }/beneficiart/beneficiartList.jsp">Cause</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Contact</a></li>

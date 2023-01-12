@@ -31,6 +31,13 @@ public class MemberServiceImpl implements MemberService {
 		if (memberDao.selectDuplicatedId(memberId) == null) return "duplicate";
 		else 												return "noDuplicate";
 	}
+
+	@Override
+	public boolean login(MemberDto memberDto) throws Exception {
+		//MemberDto checkExsisId = memberDao.selectLogin(memberDto);
+		
+		return false;
+	}
 	
 		
 		
