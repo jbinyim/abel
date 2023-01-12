@@ -66,13 +66,13 @@ public class MemberController {
 			session.setAttribute("memberId", memberDto.getMemberId());
 			
 			message = "<script>";
-			message += "alert('로그인 되었습니다.');";
+			message += "alert('로그인 성공.');";
 			message += " location.href='" + request.getContextPath() + "/';";
 			message += " </script>";
 		}
 		else {
 			message  = "<script>";
-			message += " alert('로그인에 실패하였습니다. 아이디와 비밀번호를 확인하세요.');";
+			message += " alert('로그인에 실패. 아이디와 비밀번호를 확인하세요.');";
 			message += " history.go(-1);";
 			message += " </script>";
 		}
@@ -80,6 +80,22 @@ public class MemberController {
 		return message;
 		
 	}
+	
+	@RequestMapping(value="/logout" , method=RequestMethod.GET)
+	public @ResponseBody String logout(HttpServletRequest request) throws Exception {
+		
+		HttpSession session = request.getSession();
+		session.invalidate();
+		
+		String message = "<script>";
+			   message += "alert('로그아웃.');";
+			   message += "location.href='" + request.getContextPath() + "/';";
+			   message += "</script>";
+ 			   
+		return message;
+		
+	}
+	
 	
 	
 

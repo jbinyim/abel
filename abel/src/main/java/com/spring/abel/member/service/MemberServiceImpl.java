@@ -1,7 +1,6 @@
 package com.spring.abel.member.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -34,8 +33,12 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public boolean login(MemberDto memberDto) throws Exception {
-		//MemberDto checkExsisId = memberDao.selectLogin(memberDto);
-		
+		MemberDto checkExsisId = memberDao.selectLogin(memberDto);
+		if (checkExsisId != null) {
+			if (bCryptPasswordEncoder.matches(memberDto.getMemberPasswd() , checkExsisId.getMemberPasswd())) {
+				return true;
+			}
+		}
 		return false;
 	}
 	

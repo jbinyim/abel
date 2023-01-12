@@ -4,29 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Charifit</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/nice-select.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/gijgo.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slicknav.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+   
 </head>
 <body>
     <!--[if lte IE 9]>
@@ -57,7 +35,7 @@
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+                                <img class="card-img rounded-0" src="${contextPath }/resources/bootstrap/img/blog/single_blog_1.png" alt="">
                                 <a href="#" class="blog_item_date">
                                     <h3>15</h3>
                                     <p>Jan</p>
@@ -79,7 +57,7 @@
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_2.png" alt="">
+                                <img class="card-img rounded-0" src="${contextPath }/resources/bootstrap/img/blog/single_blog_2.png" alt="">
                                 <a href="#" class="blog_item_date">
                                     <h3>15</h3>
                                     <p>Jan</p>
@@ -123,7 +101,7 @@
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_4.png" alt="">
+                                <img class="card-img rounded-0" src="${contextPath }/resources/bootstrap/img/blog/single_blog_4.png" alt="">
                                 <a href="#" class="blog_item_date">
                                     <h3>15</h3>
                                     <p>Jan</p>
@@ -145,7 +123,7 @@
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/blog/single_blog_5.png" alt="">
+                                <img class="card-img rounded-0" src="${contextPath }/resources/bootstrap/img/blog/single_blog_5.png" alt="">
                                 <a href="#" class="blog_item_date">
                                     <h3>15</h3>
                                     <p>Jan</p>
@@ -251,7 +229,7 @@
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Recent Post</h3>
                             <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
+                                <img src="${contextPath }/resources/bootstrap/img/post/post_1.png" alt="post">
                                 <div class="media-body">
                                     <a href="single-blog.html">
                                         <h3>From life was you fish...</h3>
@@ -260,7 +238,7 @@
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/post/post_2.png" alt="post">
+                                <img src="${contextPath }/resources/bootstrap/img/post/post_2.png" alt="post">
                                 <div class="media-body">
                                     <a href="single-blog.html">
                                         <h3>The Amazing Hubble</h3>
@@ -269,7 +247,7 @@
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/post/post_3.png" alt="post">
+                                <img src="${contextPath }/resources/bootstrap/img/post/post_3.png" alt="post">
                                 <div class="media-body">
                                     <a href="single-blog.html">
                                         <h3>Astronomy Or Astrology</h3>
@@ -278,7 +256,7 @@
                                 </div>
                             </div>
                             <div class="media post_item">
-                                <img src="img/post/post_4.png" alt="post">
+                                <img src="${contextPath }/resources/bootstrap/img/post/post_4.png" alt="post">
                                 <div class="media-body">
                                     <a href="single-blog.html">
                                         <h3>Asteroids telescope</h3>
@@ -323,32 +301,32 @@
                             <ul class="instagram_row flex-wrap">
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_5.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_5.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_6.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_6.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_7.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_7.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_8.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_8.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_9.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_9.png" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img class="img-fluid" src="img/post/post_10.png" alt="">
+                                        <img class="${contextPath }/resources/bootstrap/img-fluid" src="img/post/post_10.png" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -453,7 +431,7 @@
                                 <li>
                                     <div class="thumb">
                                         <a href="#">
-                                            <img src="img/news/news_1.png" alt="">
+                                            <img src="${contextPath }/resources/bootstrap/img/news/news_1.png" alt="">
                                         </a>
                                     </div>
                                     <div class="info">
@@ -467,7 +445,7 @@
                                 <li>
                                     <div class="thumb">
                                         <a href="#">
-                                            <img src="img/news/news_2.png" alt="">
+                                            <img src="${contextPath }/resources/bootstrap/img/news/news_2.png" alt="">
                                         </a>
                                     </div>
                                     <div class="info">

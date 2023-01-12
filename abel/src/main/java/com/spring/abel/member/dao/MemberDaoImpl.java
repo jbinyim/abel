@@ -22,5 +22,10 @@ public class MemberDaoImpl implements MemberDao{
 		return sqlSession.selectOne("member.selectDuplicatedId" , memberId);
 	}
 
+	@Override
+	public MemberDto selectLogin(MemberDto memberDto) throws Exception {
+		return sqlSession.selectOne("member.selectLogin" , memberDto);
+	}
+
 
 }

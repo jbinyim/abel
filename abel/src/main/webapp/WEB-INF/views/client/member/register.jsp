@@ -38,7 +38,7 @@ $().ready(function() {
 </head>
 <body>
 	
-	<form action="${contextPath }/member/register" method="post">
+	<form action="${contextPath }/member/register" method="post" class="checkout__form">
 		<h3>회원가입</h3>
 		<table border="1">
 			<tr>
