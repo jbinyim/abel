@@ -36,7 +36,7 @@ public class MemberController {
 		
 		String message = "<script>";
 			   message += "alert('회원가입되었습니다.');";
-			   message += "location.href='" + request.getContextPath() + "/';";
+			   message += "location.href='" + request.getContextPath() + "/main';";
 			   message += "</script>";
 			   
 		HttpHeaders responseHeaders = new HttpHeaders();

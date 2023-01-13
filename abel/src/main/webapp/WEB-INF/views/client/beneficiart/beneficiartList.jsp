@@ -4,13 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-   
+<meta charset="utf-8">
 </head>
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
 
     <!-- bradcam_area_start  -->
     <div class="bradcam_area breadcam_bg overlay d-flex align-items-center justify-content-center">
