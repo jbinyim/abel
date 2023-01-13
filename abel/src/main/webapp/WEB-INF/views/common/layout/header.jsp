@@ -23,11 +23,11 @@
                         </div>
                         <div class="col-xl-6 col-md-6 col-lg-4">
                             <div class="social_media_links d-none d-lg-block">
-                                <a href="${contextPath }/client/member/register.jsp">
-                                    <i>회원가입</i>
-                                </a>
                                 <a href="${contextPath }/member/login">
-                                    <i>로그인</i>
+                                    <i>login</i>
+                                </a>
+                                <a href="${contextPath }/member/register">
+                                    <i>register</i>
                                 </a>
                                 <a href="#">
                                     <i class="fa fa-linkedin"></i>

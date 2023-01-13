@@ -67,7 +67,7 @@ public class MemberController {
 			
 			message = "<script>";
 			message += "alert('로그인 성공.');";
-			message += " location.href='" + request.getContextPath() + "/';";
+			message += " location.href='" + request.getContextPath() + "/main';";
 			message += " </script>";
 		}
 		else {
