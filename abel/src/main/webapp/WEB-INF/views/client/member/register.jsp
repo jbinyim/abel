@@ -6,6 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	.single-input-primary{display: inline;}
+	#design{background-color:#33cc99;}
+	#design2{background-color:#33cc99; margin:0 auto;}
+</style>
 <script>
 
 </script>
@@ -28,13 +33,6 @@
 	<!-- Start Align Area -->
 	<div class="whole-wrap">
 		<div class="container box_1170">
-			<div class="section-top-border">
-				<div class="row">
-					<div class="col-md-3">
-						<img src="img/elements/d.jpg" alt="" class="img-fluid">
-					</div>
-				</div>
-			</div>
 			<div class="section-top-border">
 				<div class="row">
 					<div class="col-lg-8 col-md-8">
@@ -98,7 +96,7 @@
 								<input type="text" name="zipcode" placeholder="우편번호" style="width: 20%;"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = '우편번호'" required
 									class="single-input-primary"> &emsp;
-									<input type="button" value="검색" onclick="execDaumPostcode();" style="width: 10%; padding-left: 0">
+									<input type="button" id="design2" value="검색" onclick="execDaumPostcode();" style="width: 10%; padding-left: 0" class="genric-btn info radius">
 							</div>
 							<div class="mt-10">
 								<input type="text" name="roadAddress" placeholder="도로명 주소를 입력하세요."
@@ -111,7 +109,7 @@
 									required class="single-input-secondary">
 							</div>
 							<div>
-							<button type="submit" class="genric-btn link">회원가입</button>
+								<button type="submit" id="design" class="genric-btn info circle">회원가입</button>
 							</div>
 						</form>
 					</div>

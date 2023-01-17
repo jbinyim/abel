@@ -18,28 +18,23 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public void addMember(MemberDto memberDto) throws Exception {
+		
 		memberDto.setMemberPasswd(bCryptPasswordEncoder.encode(memberDto.getMemberPasswd()));
 		if (memberDto.getEmailstsYn() == null) memberDto.setEmailstsYn("N");
 		if (memberDto.getSmsstsYn() == null) memberDto.setSmsstsYn("N");
 		memberDao.insertMember(memberDto);
 	}
 
-	@Override
-	public String checkDuplicatedId(String memberId) throws Exception {
-		
-		if (memberDao.selectDuplicatedId(memberId) == null) return "duplicate";
-		else 												return "noDuplicate";
-	}
 
 	@Override
-	public boolean login(MemberDto memberDto) throws Exception {
-		MemberDto checkExsisId = memberDao.selectLogin(memberDto);
-		if (checkExsisId != null) {
-			if (bCryptPasswordEncoder.matches(memberDto.getMemberPasswd() , checkExsisId.getMemberPasswd())) {
-				return true;
-			}
+	public MemberDto login(MemberDto memberDto) throws Exception {
+		MemberDto dbMemberDto = memberDao.selectLogin(memberDto);
+		if (dbMemberDto != null) {
+			if (bCryptPasswordEncoder.matches(memberDto.getMemberPasswd(), dbMemberDto.getMemberPasswd())) {
+				return memberDto;
+			} 
 		}
-		return false;
+		return null;
 	}
 	
 		

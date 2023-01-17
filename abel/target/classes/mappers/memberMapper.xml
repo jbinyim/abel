@@ -23,16 +23,6 @@
 		)
 	</insert>
 	
-	<select id="selectDuplicatedId" parameterType="String" resultType="String">
-	
-		SELECT
-				MEMBER_ID
-		FROM
-				MEMBER
-		WHERE
-				MEMBER_ID = #{memberId}
-	
-	</select>
 	
 	<select id="selectLogin" resultType="MemberDto" parameterType="String">
 		SELECT

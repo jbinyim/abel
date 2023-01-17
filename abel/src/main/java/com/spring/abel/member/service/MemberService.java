@@ -5,7 +5,6 @@ import com.spring.abel.member.dto.MemberDto;
 public interface MemberService {
 
 	public void addMember(MemberDto memberDto) throws Exception;
-	public String checkDuplicatedId(String memberId) throws Exception;
-	public boolean login(MemberDto memberDto) throws Exception;
+	public MemberDto login(MemberDto memberDto) throws Exception;
 
 }

@@ -9,6 +9,7 @@
 	
 	<typeAliases>
 		<typeAlias type="com.spring.abel.member.dto.MemberDto" alias="MemberDto"/>
+		<typeAlias type="com.spring.abel.beneficiart.dto.BeneficiartDto" alias="BeneficiartDto"/>
 	</typeAliases>
 	
 </configuration>

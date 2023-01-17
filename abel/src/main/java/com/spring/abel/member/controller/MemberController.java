@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.spring.abel.member.dto.MemberDto;
@@ -30,25 +31,32 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="/register" , method=RequestMethod.POST)
-	public ResponseEntity<Object> register(MemberDto memberDto , HttpServletRequest request) throws Exception {
+	public @ResponseBody String register (MultipartHttpServletRequest multipartRequest , HttpServletRequest request) throws Exception {
+		
+		MemberDto memberDto = new MemberDto();
+		memberDto.setMemberId(multipartRequest.getParameter("memberId"));
+		memberDto.setMemberPasswd(multipartRequest.getParameter("memberPasswd"));
+		memberDto.setMemberNm(multipartRequest.getParameter("memberNm"));
+		memberDto.setEmail(multipartRequest.getParameter("email"));
+		memberDto.setEmailstsYn(multipartRequest.getParameter("emailstsYn"));
+		memberDto.setDateBirth(multipartRequest.getParameter("dateBirth"));
+		memberDto.setSex(multipartRequest.getParameter("sex"));
+		memberDto.setHp(multipartRequest.getParameter("hp"));
+		memberDto.setSmsstsYn(multipartRequest.getParameter("smsstsYn"));
+		memberDto.setZipcode(multipartRequest.getParameter("zipcode"));
+		memberDto.setRoadAddress(multipartRequest.getParameter("roadAddress"));
+		memberDto.setJibunAddress(multipartRequest.getParameter("jibunAddress"));
+		memberDto.setNamujiAddress(multipartRequest.getParameter("namujiAddress"));
 		
 		memberService.addMember(memberDto);
 		
-		String message = "<script>";
-			   message += "alert('회원가입되었습니다.');";
-			   message += "location.href='" + request.getContextPath() + "/main';";
-			   message += "</script>";
+		String jsScript = "<script>";
+			   jsScript += "alert('가입 성공.');";
+			   jsScript += "location.href='" + request.getContextPath() + "/member/login'";
+			   jsScript += "</script>";
 			   
-		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		return jsScript;
 		
-		return new ResponseEntity<Object>(message, responseHeaders, HttpStatus.OK);
-		
-	}
-	
-	@RequestMapping(value="/checkDuplicatedId" , method=RequestMethod.GET)
-	public ResponseEntity<String> overlapped(@RequestParam("memberId") String memberId) throws Exception {
-		return new ResponseEntity<String>(memberService.checkDuplicatedId(memberId) , HttpStatus.OK);
 	}
 	
 	@RequestMapping(value="/login" , method=RequestMethod.GET)
@@ -60,7 +68,7 @@ public class MemberController {
 	public @ResponseBody String login (MemberDto memberDto , HttpServletRequest request) throws Exception{
 		
 		String message = "";
-		if (memberService.login(memberDto)) {
+		if (memberService.login(memberDto) != null) {
 			
 			HttpSession session = request.getSession();
 			session.setAttribute("memberId", memberDto.getMemberId());

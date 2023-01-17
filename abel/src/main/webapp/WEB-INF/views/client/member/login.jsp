@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	#sibal{background-color:#33cc99;}
+</style>
 <script>
 
 </script>
@@ -53,7 +56,7 @@
 									class="single-input">
 							</div>
 							<div>
-							<button type="submit" class="genric-btn link">로그인</button>
+							<button type="submit" id="sibal" class="genric-btn info circle">로그인</button>
 							</div>
 						</form>
 					</div>
