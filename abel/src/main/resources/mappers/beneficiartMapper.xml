@@ -7,12 +7,8 @@
 		SELECT 
 	   			*
 	    FROM 
-				GOODS
-		<where>
-			
-			
+				beneficiart
 		
-		</where>
 	</select>
 
 </mapper>

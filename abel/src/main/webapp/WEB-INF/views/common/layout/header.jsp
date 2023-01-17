@@ -23,18 +23,24 @@
                         </div>
                         <div class="col-xl-6 col-md-6 col-lg-4">
                             <div class="social_media_links d-none d-lg-block">
-                                <a href="${contextPath }/member/login">
-                                    <i>login</i>
-                                </a>
-                                <a href="${contextPath }/member/register">
-                                    <i>register</i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
+                           		<c:choose>
+                           			<c:when test="${sessionScope.memberId eq null}">
+		                                <a href="${contextPath }/member/login">
+		                                    <i>login</i>
+		                                </a>
+		                                <a href="${contextPath }/member/register">
+		                                    <i>register</i>
+		                                </a>
+		                            </c:when>
+		                            <c:otherwise>
+		                                <a href="${contextPath }/member/logout">
+		                                    <i>로그아웃</i>
+		                                </a>
+		                                <a href="#">
+		                                    <i>회원정보 수정</i>
+		                                </a>
+		                            </c:otherwise>
+                                </c:choose>
                             </div>
                         </div>
                     </div>
@@ -54,26 +60,26 @@
                             <div class="main-menu">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">home</a></li>
-                                        <li><a href="About.html">About</a></li>
+                                        <li><a href="index.html">소식</a></li>
+                                        <li><a href="About.html">후기</a></li>
                                         <li><a href="#">맞춤후원 <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="${contextPath }/beneficiart/beneficiartList">기념일후원</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><a href="${contextPath }/beneficiart/beneficiartList">기념일 후원</a></li>
+                                                <li><a href="single-blog.html">주제별 후원</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                        <li><a href="#">어린이후원 <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href="${contextPath }/beneficiart/beneficiartList">Cause</a></li>
+                                                <li><a href="elements.html">함께후원</a></li>
+                                                <li><a href="${contextPath }/beneficiart/beneficiartList">1:1 어린이후원</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="contact.html">소개</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
                                     <div class="book_btn d-none d-lg-block">
-                                        <a data-scroll-nav='1' href="#">Make a Donate</a>
+                                        <a data-scroll-nav='1' href="#">바로 후원하기</a>
                                     </div>
                                 </div>
                             </div>

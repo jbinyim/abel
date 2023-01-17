@@ -51,8 +51,8 @@ public class MemberController {
 		memberService.addMember(memberDto);
 		
 		String jsScript = "<script>";
-			   jsScript += "alert('가입 성공.');";
-			   jsScript += "location.href='" + request.getContextPath() + "/member/login'";
+			   jsScript += "alert('register success');";
+			   jsScript += "location.href='" + request.getContextPath() + "/main'";
 			   jsScript += "</script>";
 			   
 		return jsScript;
@@ -74,13 +74,13 @@ public class MemberController {
 			session.setAttribute("memberId", memberDto.getMemberId());
 			
 			message = "<script>";
-			message += "alert('로그인 성공.');";
+			message += "alert('login');";
 			message += " location.href='" + request.getContextPath() + "/main';";
 			message += " </script>";
 		}
 		else {
 			message  = "<script>";
-			message += " alert('로그인에 실패. 아이디와 비밀번호를 확인하세요.');";
+			message += " alert('login false');";
 			message += " history.go(-1);";
 			message += " </script>";
 		}
@@ -96,8 +96,8 @@ public class MemberController {
 		session.invalidate();
 		
 		String message = "<script>";
-			   message += "alert('로그아웃.');";
-			   message += "location.href='" + request.getContextPath() + "/';";
+			   message += "alert('logout.');";
+			   message += "location.href='" + request.getContextPath() + "/main';";
 			   message += "</script>";
  			   
 		return message;

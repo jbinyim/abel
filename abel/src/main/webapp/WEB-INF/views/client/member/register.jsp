@@ -37,7 +37,7 @@
 				<div class="row">
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30">회원가입</h3>
-						<form action="#">
+						<form action="${contextPath }/member/register" method="post" enctype="multipart/form-data">
 							<div class="mt-10">
 								<p>아이디</p>
 								<input type="text" name="memberId" placeholder="아이디를 입력하세요."

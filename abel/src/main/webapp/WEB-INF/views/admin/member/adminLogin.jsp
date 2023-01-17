@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-	#sibal{background-color:#33cc99;}
+	#style{background-color:#33cc99;}
 </style>
 <script>
 
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>login</h3>
+                        <h3>관리자 로그인</h3>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
 				<div class="row">
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30">로그인</h3>
-						<form action="${contextPath }/member/login" method="post">
+						<form action="${contextPath }/admin/member/adminLogin" method="post">
 							<div class="mt-10">
 								<p>아이디</p>
 								<input type="text" name="memberId" placeholder="아이디를 입력하세요."
@@ -51,12 +51,12 @@
 							</div>
 							<div class="mt-10">
 								<p>비밀번호</p>
-								<input type="text" name="memberPasswd" placeholder="비밀번호를 입력하세요."
+								<input type="password" name="memberPasswd" placeholder="비밀번호를 입력하세요."
 									onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호를 입력하세요.'" required
 									class="single-input">
 							</div>
 							<div>
-							<button type="submit" id="sibal" class="genric-btn info circle">로그인</button>
+							<button type="submit" id="style" class="genric-btn info circle">로그인</button>
 							</div>
 						</form>
 					</div>

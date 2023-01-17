@@ -3,7 +3,7 @@
 
 <mapper namespace="member">
 
-	<insert id="insertMember" parameterType="memberDto">
+	<insert id="insertMember" parameterType="MemberDto">
 		INSERT INTO
 				MEMBER
 		VALUES (

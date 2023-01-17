@@ -15,12 +15,10 @@
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="slider_text ">
-                            <span>Get Started Today.</span>
-                            <h3> Help the children
-                                When They Need</h3>
-                            <p>With so much to consume and such little time, coming up <br>
-                                with relevant title ideas is essential</p>
-                            <a href="About.html" class="boxed-btn3">Learn More
+                            <span>2023</span>
+                            <h3> 기부 영수증 </h3>
+                            <h3>발급 안내</h3>
+                            <a href="About.html" class="boxed-btn3">자세히 보기
                             </a>
                         </div>
                     </div>
@@ -36,7 +34,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section_title text-center mb-55">
-                        <h3><span>Reason of Helping</span></h3>
+                        <h3><span>1:1 어린이후원</span></h3>
                     </div>
                 </div>
             </div>
