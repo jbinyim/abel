@@ -46,7 +46,7 @@
 							</div>
 							<div class="mt-10">
 								<p>비밀번호</p>
-								<input type="text" name="memberPasswd" placeholder="비밀번호를 입력하세요."
+								<input type="password" name="memberPasswd" placeholder="비밀번호를 입력하세요."
 									onfocus="this.placeholder = ''" onblur="this.placeholder = '비밀번호를 입력하세요.'" required
 									class="single-input">
 							</div>
