@@ -1,5 +1,8 @@
 package com.spring.abel.beneficiart.dto;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BeneficiartDto {
 	
 	private int beneficiartCd;

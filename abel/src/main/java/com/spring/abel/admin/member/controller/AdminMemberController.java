@@ -61,4 +61,17 @@ public class AdminMemberController {
 		
 	}
 	
+	@RequestMapping(value="/adminMemberList" , method=RequestMethod.GET)
+	public ModelAndView adminMemberList(HttpServletRequest request) throws Exception{
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("admin/member/adminMemberList");
+		HttpSession session = request.getSession();
+		session.setAttribute("sideMenu", "adminMode");
+		mv.addObject("memberList"  , adminMemberService.getMemberList());
+		
+		return mv;
+		
+	}
+	
 }

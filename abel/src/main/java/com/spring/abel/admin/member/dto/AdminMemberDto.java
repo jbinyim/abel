@@ -11,25 +11,23 @@ public class AdminMemberDto {
 	private String passwd;
 	private Date joinDt;
 	
-	public Date getJoinDt() {
-		return joinDt;
-	}
-	public void setJoinDt(Date joinDt) {
-		this.joinDt = joinDt;
-	}
 	public String getAdminId() {
 		return adminId;
 	}
 	public void setAdminId(String adminId) {
 		this.adminId = adminId;
 	}
-	public String getPassws() {
+	public String getPasswd() {
 		return passwd;
 	}
-	public void setPassws(String passws) {
+	public void setPasswd(String passwd) {
 		this.passwd = passwd;
 	}
-	
-	
+	public Date getJoinDt() {
+		return joinDt;
+	}
+	public void setJoinDt(Date joinDt) {
+		this.joinDt = joinDt;
+	}
 
 }

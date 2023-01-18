@@ -16,8 +16,12 @@
                         <div class="col-xl-6 col-md-12 col-lg-8">
                             <div class="short_contact_list">
                                 <ul>
-                                    <li><a href="#"> <i class="fa fa-phone"></i> +1 (454) 556-5656</a></li>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i>Yourmail@gmail.com</a></li>
+                                	<c:choose>
+                                		<c:when test="${sessionScope.role eq 'admin'}">
+		                                	<li><a href="${contextPath }/admin/member/adminMemberList">회원관리</a></li>
+		                                    <li><a href="${contextPath }/admin/beneficiarts/adminBeneficiartAdd">후원관리</a></li>
+		                                </c:when>
+                                	</c:choose>
                                 </ul>
                             </div>
                         </div>

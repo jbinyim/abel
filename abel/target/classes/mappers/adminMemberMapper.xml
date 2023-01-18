@@ -20,5 +20,12 @@
     	  WHERE
     	  			MEMBER_ID = #{memberId}
 	</select>
+	
+	<select id="selectListMember" resultType="MemberDto" >
+		  SELECT  
+    				*  
+    	  FROM 
+    				MEMBER 
+	</select>
 
 </mapper>
