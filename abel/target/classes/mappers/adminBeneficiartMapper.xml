@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin.beneficiart">
+
+	<select id="selectListBeneficiart" resultType="BeneficiartDto">
+		SELECT
+				*
+		FROM
+				BENEFICIART
+	</select>
+
+	<insert id="insertBeneficiart" parameterType="BeneficiartDto">
+		INSERT INTO
+				BENEFICIART(
+					BENEFICIART_CD,
+					BENEFICIART_NM,
+					BENEFICIART_COMMENT,
+					CONTRIBUTION,
+					BENEFICIART_BIRTH,
+					BENEFICIART_SEX,
+					BENEFICIART_HOBBY,
+					BENEFICIART_FAMILY,
+					BENEFICIART_COUNTRY,
+					BENEFICIART_FILE_NAME
+				)
+		VALUES (
+				#{beneficiartCd},
+				#{beneficiartNm},
+				#{beneficiartComment},
+				#{contribution},
+				#{beneficiartBirth},
+				#{beneficiartSex},
+				#{beneficiartHobby},
+				#{beneficiartFamily},
+				#{beneficiartCountry},
+				#{beneficiartFileName}
+		)
+	</insert>
+
+</mapper>

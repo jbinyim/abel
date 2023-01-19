@@ -14,6 +14,14 @@ public class BeneficiartDto {
 	private String beneficiartHobby;
 	private String beneficiartFamily;
 	private String beneficiartCountry;
+	private String beneficiartFileName;
+	
+	public String getBeneficiartFileName() {
+		return beneficiartFileName;
+	}
+	public void setBeneficiartFileName(String beneficiartFileName) {
+		this.beneficiartFileName = beneficiartFileName;
+	}
 	public int getBeneficiartCd() {
 		return beneficiartCd;
 	}

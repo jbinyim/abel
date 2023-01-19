@@ -17,7 +17,7 @@
                         <div class="slider_text ">
                             <span>2023</span>
                             <h3> 기부 영수증 </h3>
-                            <h3>발급 안내</h3>
+                            <h3>발급하러 가기</h3>
                             <a href="About.html" class="boxed-btn3">자세히 보기
                             </a>
                         </div>
@@ -51,7 +51,7 @@
                             <p>Lorem ipsum, or lipsum as it is 
                                 sometimes known, is dummy 
                                 text used in laying out print.</p>
-                            <a href="#" class="read_more">Read More</a>
+                            <a href="#" class="read_more">자세히 보기</a>
                         </div>
                     </div>
                 </div>

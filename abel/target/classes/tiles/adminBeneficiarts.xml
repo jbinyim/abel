@@ -4,8 +4,12 @@
 <tiles-definitions>
 
 	<definition name="admin/beneficiart/adminBeneficiartAdd" extends="default">
-		<put-attribute name="body" value="/WEB-INF/views/admin/beneficiarts/adminBeneficiartAdd.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/beneficiart/adminBeneficiartAdd.jsp" />
 		<put-attribute name="title" value="수헤자 추가" />
+	</definition>
+	<definition name="admin/beneficiart/adminBeneficiartList" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/admin/beneficiart/adminBeneficiartList.jsp" />
+		<put-attribute name="title" value="수헤자 목록" />
 	</definition>
 
 </tiles-definitions>
