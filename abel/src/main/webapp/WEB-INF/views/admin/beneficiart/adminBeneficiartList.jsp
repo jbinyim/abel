@@ -6,6 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	#design{background-color:#33cc99;}
+</style>
 </head>
 <body>
 <!-- bradcam_area_start  -->
@@ -22,10 +25,10 @@
     </div>
     <!-- bradcam_area_end  -->
 	<div class="section-top-border text-right">
-					<h3 class="mb-30"><a href="${contextPath }/admin/beneficiart/adminBeneficiartAdd">추가하기</a></h3>
+					<a href="${contextPath }/admin/beneficiart/adminBeneficiartAdd"><button type="submit" id="design" class="genric-btn info circle">추가하기</button></a>
 					<div class="row">
-					</div>
-				</div>
+	</div>
+	</div>
     <!-- popular_causes_area_start  -->
     <div class="popular_causes_area pt-120">
         <div class="container">
@@ -41,9 +44,6 @@
 	                            <div class="custom_progress_bar">
 	                                <div class="progress">
 	                                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-	                                        <span class="progres_count">
-	                                            30%
-	                                        </span>
 	                                    </div>
 	                                  </div>
 	                            </div>
