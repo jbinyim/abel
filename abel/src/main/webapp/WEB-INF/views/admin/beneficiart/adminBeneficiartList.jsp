@@ -51,10 +51,12 @@
 		                                <span>후원유형: 정기후원</span>
 		                                <span>월: ${beneficiartDto.contribution }원</span>
 		                            </div>
+		                            <h2>${beneficiartDto.beneficiartCd }.</h2>
 		                            <a href="cause_details.html"><h4>안녕하세요 저는 ${beneficiartDto.beneficiartNm }입니다.</h4></a>
 		                            <p>저는 ${beneficiartDto.beneficiartCountry }에 사는 어린이에요.<br/>
 		                               저는 ${beneficiartDto.beneficiartBirth }에 태어났습니다.</p>
-		                            <a class="read_more" href="cause_details.html">자세히 보기</a>
+		                            <a class="read_more" href="${contextPath }/admin/beneficiart/adminBeneficiartDetail?beneficiartCd=${beneficiartDto.beneficiartCd}">수정하기</a>
+		                            <a class="read_more" href="javascript:adminBenficiartRemove(${beneficiartDto.beneficiartCd });">삭제하기</a>
 		                        </div>
 		                    </div>
 		                </div>

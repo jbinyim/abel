@@ -3,11 +3,22 @@
 
 <mapper namespace="beneficiart">
 
-	<select id="selectBeneficiartList" parameterType="BeneficiartDto" resultType="BeneficiartDto">
+	<select id="selectBeneficiartList" parameterType="String" resultType="BeneficiartDto">
 		SELECT 
 	   			*
 	    FROM 
-				beneficiart
+				BENEFICIART
+				
+	</select>
+	
+	
+	<select id="selectBeneficiart" parameterType="int" resultType="BeneficiartDto">
+		SELECT
+				*
+		FROM
+				BENEFICIART
+		WHERE
+				BENEFICIART_CD = #{beneficiartCd}
 		
 	</select>
 

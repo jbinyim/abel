@@ -24,4 +24,15 @@ public class AdminBeneficiartServiceImpl implements AdminBeneficiartService{
 		return adminBeneficairtDao.selectListBeneficiart();
 	}
 
+	@Override
+	public void adminBeneficiartDetail(BeneficiartDto beneficiartDto) throws Exception {
+		adminBeneficairtDao.updateBeneficiiartDetail(beneficiartDto);
+		
+	}
+
+	@Override
+	public void removeBeneficiart(int beneficiartCd) throws Exception {
+		adminBeneficairtDao.deleteBeneficiart(beneficiartCd);
+	}
+
 }

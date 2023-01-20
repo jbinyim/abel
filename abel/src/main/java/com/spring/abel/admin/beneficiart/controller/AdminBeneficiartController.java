@@ -37,8 +37,8 @@ public class AdminBeneficiartController {
 	private final String CURR_IMAGE_REPO_PATH = "C:\\file_repo";
 	private final String SEPERATOR = "\\";
 	
-	//private final String CURR_IMAGE_REPO_PATH = "/var/lib/tomcat9/file_repo";
-	//private final String SEPERATOR = "/";											// linux
+//	private final String CURR_IMAGE_REPO_PATH = "/var/lib/tomcat9/file_repo";
+//	private final String SEPERATOR = "/";											// linux
 	
 	@RequestMapping(value="/adminBeneficiartList" , method=RequestMethod.GET)
 	public ModelAndView adminBeneficiartList() throws Exception {
@@ -60,7 +60,6 @@ public class AdminBeneficiartController {
 		
 		multipartRequest.setCharacterEncoding("utf-8");
 		BeneficiartDto beneficiartDto = new BeneficiartDto();
-		beneficiartDto.setBeneficiartCd(Integer.parseInt(multipartRequest.getParameter("beneficiartCd")));
 		beneficiartDto.setBeneficiartNm(multipartRequest.getParameter("beneficiartNm"));
 		beneficiartDto.setBeneficiartComment(multipartRequest.getParameter("beneficiartComment"));
 		beneficiartDto.setContribution(Integer.parseInt(multipartRequest.getParameter("contribution")));
@@ -98,6 +97,63 @@ public class AdminBeneficiartController {
 		
 	}
 	
+	@RequestMapping(value="/adminBeneficiartDetail" , method=RequestMethod.GET)
+	public ModelAndView beneficiartDetail(@RequestParam("beneficiartCd") int beneficiartCd) throws Exception{
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("admin/beneficiart/adminBeneficiartDetail");
+		mv.addObject("beneficiaratDto" , beneficiartService.getBeneficiartDetail(beneficiartCd));
+		
+		return mv;
+		
+	}
+	
+	@RequestMapping(value="/adminBeneficiartDetail" , method=RequestMethod.POST)
+	public ResponseEntity<Object> adminBeneficiartDetail(MultipartHttpServletRequest multipartRequest) throws Exception {
+		
+		multipartRequest.setCharacterEncoding("utf-8");
+		BeneficiartDto beneficiartDto = new BeneficiartDto();
+		beneficiartDto.setBeneficiartCd(Integer.parseInt(multipartRequest.getParameter("beneficiartCd")));
+		beneficiartDto.setBeneficiartNm(multipartRequest.getParameter("beneficiartNm"));
+		beneficiartDto.setBeneficiartComment(multipartRequest.getParameter("beneficiartComment"));
+		beneficiartDto.setContribution(Integer.parseInt(multipartRequest.getParameter("contribution")));
+		beneficiartDto.setBeneficiartBirth(multipartRequest.getParameter("beneficiartBirth"));
+		beneficiartDto.setBeneficiartSex(multipartRequest.getParameter("beneficiartSex"));
+		beneficiartDto.setBeneficiartHobby(multipartRequest.getParameter("beneficiartHobby"));
+		beneficiartDto.setBeneficiartFamily(multipartRequest.getParameter("beneficiartFamily"));
+		beneficiartDto.setBeneficiartCountry(multipartRequest.getParameter("beneficiartCountry"));
+		
+		Iterator<String> file = multipartRequest.getFileNames();
+		if (file.hasNext()) {
+			
+			MultipartFile uploadFile = multipartRequest.getFile(file.next());
+			
+			if(!uploadFile.getOriginalFilename().isEmpty()) {
+				String uploadFileName = UUID.randomUUID() + "_" + uploadFile.getOriginalFilename();
+				File f = new File(CURR_IMAGE_REPO_PATH + SEPERATOR + uploadFileName);
+				uploadFile.transferTo(f);
+				beneficiartDto.setBeneficiartFileName(uploadFileName);
+				
+				new File(CURR_IMAGE_REPO_PATH + SEPERATOR + beneficiartService.getBeneficiartDetail(Integer.parseInt(multipartRequest.getParameter("beneficiartCd"))).getBeneficiartFileName()).delete();
+				
+			}
+			
+		}
+		
+		adminBeneficiartService.adminBeneficiartDetail(beneficiartDto);
+		
+		String jsScript= "<script>";
+		jsScript += " alert('상품정보를 수정하였습니다.');";
+		jsScript +=" location.href='adminGoodsList';";
+		jsScript +="</script>";
+		
+		HttpHeaders responseHeaders = new HttpHeaders();
+	    responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		
+		return new ResponseEntity<Object>(jsScript, responseHeaders, HttpStatus.OK);
+		
+	}
+	
 	
 	// 썸네일 컨트롤러 : 이미지 파일을 읽어들여서 화면에 출력한다.
 	@RequestMapping(value="/thumbnails" , method=RequestMethod.GET)
@@ -115,5 +171,22 @@ public class AdminBeneficiartController {
 		out.close();
 	}
 	
+	@RequestMapping(value="/adminBeneficiartRemove" , method=RequestMethod.GET)
+	public ResponseEntity<Object> adminBeneficiartRemove(@RequestParam("beneficiaratCd") int beneficiartCd) throws Exception {
+		
+		new File(CURR_IMAGE_REPO_PATH + SEPERATOR + beneficiartService.getBeneficiartDetail(beneficiartCd).getBeneficiartFileName()).delete();
+		adminBeneficiartService.removeBeneficiart(beneficiartCd);
+		
+		String jsScript= "<script>";
+			   jsScript += " alert('등록된 상품을 삭제하였습니다.');";
+			   jsScript +=" location.href='adminBeneficiartList';";
+			   jsScript +="</script>";
+
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		
+		return new ResponseEntity<Object>(jsScript, responseHeaders, HttpStatus.OK);
+		
+	}
 
 }

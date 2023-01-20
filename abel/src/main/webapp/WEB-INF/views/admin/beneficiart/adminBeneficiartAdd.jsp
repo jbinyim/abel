@@ -34,12 +34,6 @@
 						<h3 class="mb-30">수혜자 추가</h3>
 						<form action="${contextPath }/admin/beneficiart/adminBeneficiartAdd" method="post" enctype="multipart/form-data">
 							<div class="mt-10">
-								<p>수혜자 번호</p>
-								<input type="text" name="beneficiartCd" placeholder="수혜자 번호."
-									onfocus="this.placeholder = ''" onblur="this.placeholder = '수혜자 번호.'" required
-									class="single-input">
-							</div>
-							<div class="mt-10">
 								<p>수혜자 이름</p>
 								<input type="text" name="beneficiartNm" placeholder="수혜자 이름."
 									onfocus="this.placeholder = ''" onblur="this.placeholder = '수혜자 이름.'" required

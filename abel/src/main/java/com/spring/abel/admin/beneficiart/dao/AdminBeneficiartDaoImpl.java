@@ -24,4 +24,14 @@ public class AdminBeneficiartDaoImpl implements AdminBeneficiartDao {
 		return sqlSession.selectList("admin.beneficiart.selectListBeneficiart");
 	}
 
+	@Override
+	public void updateBeneficiiartDetail(BeneficiartDto beneficiartDto) throws Exception {
+		sqlSession.update("admin.beneficiart.updateBeneficiiartDetail" , beneficiartDto);
+	}
+
+	@Override
+	public void deleteBeneficiart(int beneficiartCd) throws Exception {
+		sqlSession.delete("admin.beneficiart.deleteBeneficiart" , beneficiartCd);
+	}
+
 }

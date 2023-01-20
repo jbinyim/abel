@@ -1,6 +1,7 @@
 package com.spring.abel.beneficiart.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +16,13 @@ public class BeneficiartDaoImpl implements BeneficiartDao{
 	private SqlSession sqlSession;
 
 	@Override
-	public List<BeneficiartDto> selectBeneficiartList(BeneficiartDto beneficiartDto) throws Exception {
-		return sqlSession.selectList("beneficiart.selectBeneficiartList" , beneficiartDto);
+	public List<BeneficiartDto> selectBeneficiartList(Map<String,String> beneficiartMap) throws Exception {
+		return sqlSession.selectList("beneficiart.selectBeneficiartList" , beneficiartMap);
+	}
+
+	@Override
+	public BeneficiartDto selectBeneficiart(int beneficiartCd) throws Exception {
+		return sqlSession.selectOne("beneficiart.selectBeneficiart" , beneficiartCd);
 	}
 
 }

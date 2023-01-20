@@ -8,5 +8,7 @@ public interface AdminBeneficiartService {
 	
 	public List<BeneficiartDto> getBeneficiartList() throws Exception;
 	public void addNewBeneficiart(BeneficiartDto beneficiartDto) throws Exception;
+	public void adminBeneficiartDetail(BeneficiartDto beneficiartDto) throws Exception;
+	public void removeBeneficiart(int beneficiartCd) throws Exception;
 
 }

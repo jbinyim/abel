@@ -13,7 +13,6 @@
 	<insert id="insertBeneficiart" parameterType="BeneficiartDto">
 		INSERT INTO
 				BENEFICIART(
-					BENEFICIART_CD,
 					BENEFICIART_NM,
 					BENEFICIART_COMMENT,
 					CONTRIBUTION,
@@ -25,7 +24,6 @@
 					BENEFICIART_FILE_NAME
 				)
 		VALUES (
-				#{beneficiartCd},
 				#{beneficiartNm},
 				#{beneficiartComment},
 				#{contribution},
@@ -37,5 +35,49 @@
 				#{beneficiartFileName}
 		)
 	</insert>
+	
+	<update id="updateBeneficiiartDetail" parameterType="BeneficiartDto">
+		
+		UPDATE
+				BENEFICIART
+		<set>
+			<if test='beneficiartNm != null and beneficiartNm != "" '>
+				BENEFICIART_NM = #{beneficiartNm},
+			</if>
+			<if test='beneficiartComment != null and beneficiartComment != "" '>
+				BENEFICIART_COMMENT = #{beneficiartComment},
+			</if>
+			<if test='contribution != null and contribution != "" '>
+				CONTRIBUTION = #{contribution},
+			</if>
+			<if test='beneficiartBirth != null and beneficiartBirth != "" '>
+				BENEFICIART_BIRTH = #{beneficiartBirth},
+			</if>
+			<if test='beneficiartSex != null and beneficiartSex != "" '>
+				BENEFICIART_SEX = #{beneficiartSex},
+			</if>
+			<if test='beneficiartHobby != null and beneficiartHobby != "" '>
+				BENEFICIART_HOBBY = #{beneficiartHobby},
+			</if>
+			<if test='beneficiartFamily != null and beneficiartFamily != "" '>
+				BENEFICIART_FAMILY = #{beneficiartFamily},
+			</if>
+			<if test='beneficiartCountry != null and beneficiartCountry != "" '>
+				BENEFICIART_COUNTRY = #{beneficiartCountry},
+			</if>
+			<if test='beneficiartFileName != null and beneficiartFileName != "" '>
+				BENEFICIART_FILE_NAME = #{beneficiartFileName},
+			</if>
+		</set>
+		WHERE
+				BENEFICIART_CD = #{beneficiartCd}
+		
+	</update>
+	
+	<delete id="deleteBeneficiart" parameterType="int">
+		DELETE FROM BENEFICIART WHERE BENEFICIART_CD = #{beneficiartCd}
+	</delete>
+	
+	
 
 </mapper>

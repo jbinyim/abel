@@ -77,6 +77,15 @@ public class BeneficiartDto {
 		this.beneficiartCountry = beneficiartCountry;
 	}
 	
+	@Override
+	public String toString() {
+		return "BeneficiartDto [beneficiartCd=" + beneficiartCd + ", beneficiartNm=" + beneficiartNm
+				+ ", beneficiartComment=" + beneficiartComment + ", contribution=" + contribution
+				+ ", beneficiartBirth=" + beneficiartBirth + ", beneficiartSex=" + beneficiartSex
+				+ ", beneficiartHobby=" + beneficiartHobby + ", beneficiartFamily=" + beneficiartFamily
+				+ ", beneficiartCountry=" + beneficiartCountry + ", beneficiartFileName=" + beneficiartFileName + "]";
+	}
+	
 	
 
 }
