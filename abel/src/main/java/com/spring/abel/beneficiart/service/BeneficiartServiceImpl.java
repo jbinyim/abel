@@ -25,4 +25,9 @@ public class BeneficiartServiceImpl implements BeneficiartService{
 		return beneficiartDao.selectBeneficiart(beneficiartCd);
 	}
 
+	@Override
+	public BeneficiartDto getRelatedBeneficiartList(int beneficiartCd) throws Exception {
+		return beneficiartDao.selectListRelatedBeneficiart(beneficiartCd);
+	}
+
 }

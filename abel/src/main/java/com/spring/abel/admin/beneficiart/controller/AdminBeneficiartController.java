@@ -34,11 +34,8 @@ public class AdminBeneficiartController {
 	@Autowired
 	private BeneficiartService beneficiartService;
 	
-	private final String CURR_IMAGE_REPO_PATH = "C:\\file_repo";
-	private final String SEPERATOR = "\\";
-	
-//	private final String CURR_IMAGE_REPO_PATH = "/var/lib/tomcat9/file_repo";
-//	private final String SEPERATOR = "/";											// linux
+	private final String CURR_IMAGE_REPO_PATH = "C:\\file_repo\\";					// window
+//	private final String CURR_IMAGE_REPO_PATH = "/var/lib/tomcat9/file_repo/";		// linux
 	
 	@RequestMapping(value="/adminBeneficiartList" , method=RequestMethod.GET)
 	public ModelAndView adminBeneficiartList() throws Exception {
@@ -76,7 +73,7 @@ public class AdminBeneficiartController {
 			
 			if(!uploadFile.getOriginalFilename().isEmpty()) {
 				String uploadFileName = UUID.randomUUID() + "_" + uploadFile.getOriginalFilename();
-				File f = new File(CURR_IMAGE_REPO_PATH + SEPERATOR + uploadFileName);
+				File f = new File(CURR_IMAGE_REPO_PATH + uploadFileName);
 				uploadFile.transferTo(f);
 				beneficiartDto.setBeneficiartFileName(uploadFileName);
 			}
@@ -130,11 +127,11 @@ public class AdminBeneficiartController {
 			
 			if(!uploadFile.getOriginalFilename().isEmpty()) {
 				String uploadFileName = UUID.randomUUID() + "_" + uploadFile.getOriginalFilename();
-				File f = new File(CURR_IMAGE_REPO_PATH + SEPERATOR + uploadFileName);
+				File f = new File(CURR_IMAGE_REPO_PATH + uploadFileName);
 				uploadFile.transferTo(f);
 				beneficiartDto.setBeneficiartFileName(uploadFileName);
 				
-				new File(CURR_IMAGE_REPO_PATH + SEPERATOR + beneficiartService.getBeneficiartDetail(Integer.parseInt(multipartRequest.getParameter("beneficiartCd"))).getBeneficiartFileName()).delete();
+				new File(CURR_IMAGE_REPO_PATH + beneficiartService.getBeneficiartDetail(Integer.parseInt(multipartRequest.getParameter("beneficiartCd"))).getBeneficiartFileName()).delete();
 				
 			}
 			
@@ -160,7 +157,7 @@ public class AdminBeneficiartController {
 	public void thumbnails(@RequestParam("beneficiartFileName") String beneficiartFileName , HttpServletResponse response) throws Exception {
 	
 		OutputStream out = response.getOutputStream();
-		String filePath = CURR_IMAGE_REPO_PATH + SEPERATOR + beneficiartFileName;
+		String filePath = CURR_IMAGE_REPO_PATH + beneficiartFileName;
 		
 		File image = new File(filePath);
 		if (image.exists()) { 
@@ -172,9 +169,9 @@ public class AdminBeneficiartController {
 	}
 	
 	@RequestMapping(value="/adminBeneficiartRemove" , method=RequestMethod.GET)
-	public ResponseEntity<Object> adminBeneficiartRemove(@RequestParam("beneficiaratCd") int beneficiartCd) throws Exception {
+	public ResponseEntity<Object> adminBeneficiartRemove(@RequestParam("beneficiartCd") int beneficiartCd) throws Exception {
 		
-		new File(CURR_IMAGE_REPO_PATH + SEPERATOR + beneficiartService.getBeneficiartDetail(beneficiartCd).getBeneficiartFileName()).delete();
+		new File(CURR_IMAGE_REPO_PATH + beneficiartService.getBeneficiartDetail(beneficiartCd).getBeneficiartFileName()).delete();
 		adminBeneficiartService.removeBeneficiart(beneficiartCd);
 		
 		String jsScript= "<script>";

@@ -21,5 +21,15 @@
 				BENEFICIART_CD = #{beneficiartCd}
 		
 	</select>
+	
+	<select id="selectRelatedBeneficiartList" parameterType="int" resultType="BeneficiartDto" >
+		SELECT 
+	   			*
+	    FROM 
+				BENEFICIART
+		WHERE
+				BENEFICIART_CD = #{beneficiartCd}
+	          		       
+	</select>
 
 </mapper>

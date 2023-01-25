@@ -7,5 +7,9 @@
 		<put-attribute name="body" value="/WEB-INF/views/client/beneficiart/beneficiartList.jsp" />
 		<put-attribute name="title" value="beneficiartList" />
 	</definition>
+	<definition name="beneficiart/beneficiartMore" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/client/beneficiart/beneficiartMore.jsp" />
+		<put-attribute name="title" value="beneficiartList" />
+	</definition>
 
 </tiles-definitions>

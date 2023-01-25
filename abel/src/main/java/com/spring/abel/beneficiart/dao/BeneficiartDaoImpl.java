@@ -25,4 +25,11 @@ public class BeneficiartDaoImpl implements BeneficiartDao{
 		return sqlSession.selectOne("beneficiart.selectBeneficiart" , beneficiartCd);
 	}
 
+	@Override
+	public BeneficiartDto selectListRelatedBeneficiart(int beneficiartCd) throws Exception {
+		return sqlSession.selectOne("beneficiart.selectRelatedBeneficiartList" , beneficiartCd);
+	}
+	
+	
+
 }

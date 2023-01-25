@@ -37,7 +37,7 @@
 			                <div class="col-lg-4 col-md-6">
 			                    <div class="single_cause">
 			                        <div class="thumb">
-			                            <img src="${contextPath }/thumbnails?beneficiartFileName=${beneficiartDto.beneficiartFileName}" >
+			                            <img src="${contextPath }/admin/beneficiart/thumbnails?beneficiartFileName=${beneficiartDto.beneficiartFileName}" >
 			                        </div>
 			                        <div class="causes_content">
 			                            <div class="custom_progress_bar">
@@ -53,7 +53,7 @@
 			                            <a href="cause_details.html"><h4>안녕하세요 저는 ${beneficiartDto.beneficiartNm }입니다.</h4></a>
 		                            	<p>저는 ${beneficiartDto.beneficiartCountry }에 사는 어린이에요.<br/>
 		                              	   저는 ${beneficiartDto.beneficiartBirth }에 태어났습니다.</p>
-			                            <a class="read_more" href="cause_details.html">자세히 보기</a>
+			                            <a class="read_more" href="${contextPath }/beneficiart/beneficiartMore?beneficiartCd=${beneficiartDto.beneficiartCd}">자세히 보기</a>
 			                        </div>
 			                    </div>
 			                </div>

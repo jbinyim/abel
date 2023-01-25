@@ -95,4 +95,15 @@ public class MemberDto {
 		this.namujiAddress = namujiAddress;
 	}
 	
+	
+	@Override
+	public String toString() {
+		return "MemberDto [memberId=" + memberId + ", memberPasswd=" + memberPasswd + ", memberNm=" + memberNm
+				+ ", email=" + email + ", emailstsYn=" + emailstsYn + ", dateBirth=" + dateBirth + ", sex=" + sex
+				+ ", hp=" + hp + ", smsstsYn=" + smsstsYn + ", zipcode=" + zipcode + ", roadAddress=" + roadAddress
+				+ ", jibunAddress=" + jibunAddress + ", namujiAddress=" + namujiAddress + "]";
+	}
+	
+	
+	
 }

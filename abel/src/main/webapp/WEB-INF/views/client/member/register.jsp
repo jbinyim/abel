@@ -13,6 +13,17 @@
 </style>
 <script>
 
+	$().ready(function() {
+		
+		$("form").submit(function(){
+					
+					var dateBirth = $("#birthY").val() + "-" + $("#birthM").val() + "-" + $("#birthD").val();
+					$("[name='dateBirth']").val(dateBirth);
+					
+			});
+		
+	}
+
 </script>
 </head>
 <body>
@@ -69,9 +80,36 @@
 							</div>
 							<div class="mt-10">
 								<p>생년월일</p>
-								<input type="text" name="dateBirth" placeholder="생년월일 ex) 19991214"
-									onfocus="this.placeholder = ''" onblur="this.placeholder = '생년월일 ex) 19991214'" required
-									class="single-input">
+								<select id="birthY">
+                                    	<c:forEach var="i" begin="0" end="2023" >
+                                    		<option>${2023 - i}</option>
+                                    	</c:forEach>
+                                    </select>년 
+                                    <select id="birthM">
+                                    	<c:forEach var="i" begin="1" end="12" >
+                                    		<c:choose>
+	                                    		<c:when test="${i < 10 }">
+		                                    		<option>0${i}</option>
+	                                    		</c:when>
+	                                    		<c:otherwise>
+		                                    		<option>${i}</option>
+	                                    		</c:otherwise>
+                                    		</c:choose>
+                                    	</c:forEach>
+                                    </select>월
+                                    <select id="birthD">
+                                    	<c:forEach var="i" begin="1" end="31" >
+                                    		<c:choose>
+	                                    		<c:when test="${i < 10 }">
+		                                    		<option>0${i}</option>
+	                                    		</c:when>
+	                                    		<c:otherwise>
+		                                    		<option>${i}</option>
+	                                    		</c:otherwise>
+                                    		</c:choose>
+                                    	</c:forEach>
+                                    </select>일	
+                                    <input type="hidden" name="dateBirth"/>
 							</div>
 							<div class="mt-10 single_doonate">
 								<p>성별</p>
