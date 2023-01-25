@@ -51,43 +51,38 @@
 								</div>
 								<div class="mt-10">
 									<p> 수혜자 생년월일</p>
-									<input type="text" name="beneficiartBirth" placeholder="ex) 19991214"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = 'ex) 19991214'" required
-										class="single-input">
+									<input type="text" name="beneficiartBirth" value="${beneficiaratDto.beneficiartBirth }"
+										required class="single-input">
 								</div>
 								<div class="mt-10 single_doonate">
 									<p>수혜자 성별</p>
-	                                    <input class="form-control" type="radio"  id="m" name="beneficiartSex" value="m"> &emsp;
+	                                    <input class="form-control" type="radio"  id="m" name="beneficiartSex" value="m" value="${beneficiaratDto.beneficiartSex }"> &emsp;
 	                                    <label for="m">남</label>
-	                                    <input class="form-control" type="radio"  id="f" name="beneficiartSex" value="f"> &emsp;
+	                                    <input class="form-control" type="radio"  id="f" name="beneficiartSex" value="f" value="${beneficiaratDto.beneficiartSex }"> &emsp;
 	                                    <label for="f">여</label>
 	                            </div>
 								<div class="mt-10">
 									<p>수혜자 취미</p>
-									<input type="text" name="beneficiartHobby" placeholder="수혜자 취미"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = '수혜자 취미'" required
-										class="single-input">
+									<input type="text" name="beneficiartHobby" value="${beneficiaratDto.beneficiartHobby }"
+										required class="single-input">
 								</div>
 								<div class="mt-10">
 									<p>수헤자 가족</p>
-									<input type="text" name="beneficiartFamily" placeholder="수헤자 가족" 
-										onfocus="this.placeholder = ''" onblur="this.placeholder = '수헤자 가족'" required
-										class="single-input-primary"> &emsp;
+									<input type="text" name="beneficiartFamily" value="${beneficiaratDto.beneficiartFamily }"
+										required class="single-input-primary"> &emsp;
 								</div>
 								<div class="mt-10">
 									<p>수헤자 국가</p>
-									<input type="text" name="beneficiartCountry" placeholder="수헤자 국가."
-										onfocus="this.placeholder = ''" onblur="this.placeholder = '수헤자 국가.'" required
-										class="single-input-accent">
+									<input type="text" name="beneficiartCountry" value="${beneficiaratDto.beneficiartCountry }"
+										required class="single-input-accent">
 								</div>
 								<div class="mt-10">
 									<p>수헤자 사진</p>
-									<input type="file" name="beneficiartFileName" placeholder="수헤자 사진."
-										onfocus="this.placeholder = ''" onblur="this.placeholder = '수헤자 사진.'"
+									<input type="file" name="beneficiartFileName" value="${beneficiaratDto.beneficiartFileName }"
 										required class="single-input-secondary">
 								</div>
 								<div>
-									<button type="submit" id="design" class="genric-btn info circle">등록</button>
+									<button type="submit" id="design" class="genric-btn info circle">수정</button>
 								</div>
 							</form>
 						</div>

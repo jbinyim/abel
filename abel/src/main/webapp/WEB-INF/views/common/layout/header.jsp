@@ -68,14 +68,14 @@
                                         <li><a href="About.html">후기</a></li>
                                         <li><a href="#">맞춤후원 <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="${contextPath }/beneficiart/beneficiartList">기념일 후원</a></li>
+                                                <li><a href="${contextPath }/beneficiart/"">기념일 후원</a></li>
                                                 <li><a href="single-blog.html">주제별 후원</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">어린이후원 <i class="ti-angle-down"></i></a>
+                                        <li><a href="${contextPath }/beneficiart/childList">어린이후원 <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="elements.html">함께후원</a></li>
-                                                <li><a href="${contextPath }/beneficiart/beneficiartList">1:1 어린이후원</a></li>
+                                                <li><a href="${contextPath }/beneficiart/beneficiartList"">1:1 어린이후원</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">소개</a></li>

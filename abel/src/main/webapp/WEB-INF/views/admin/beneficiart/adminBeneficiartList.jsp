@@ -56,7 +56,7 @@
 		                            <p>저는 ${beneficiartDto.beneficiartCountry }에 사는 어린이에요.<br/>
 		                               저는 ${beneficiartDto.beneficiartBirth }에 태어났습니다.</p>
 		                            <a class="read_more" href="${contextPath }/admin/beneficiart/adminBeneficiartDetail?beneficiartCd=${beneficiartDto.beneficiartCd}">수정하기</a>
-		                            <a class="read_more" href="javascript:adminBenficiartRemove(${beneficiartDto.beneficiartCd });">삭제하기</a>
+		                            <a class="read_more" href="${contextPath }/admin/beneficiart/adminBeneficiartRemove?beneficiartCd=${beneficiartDto.beneficiartCd}">삭제하기</a>
 		                        </div>
 		                    </div>
 		                </div>

@@ -144,7 +144,7 @@ public class AdminBeneficiartController {
 		
 		String jsScript= "<script>";
 		jsScript += " alert('상품정보를 수정하였습니다.');";
-		jsScript +=" location.href='adminGoodsList';";
+		jsScript +=" location.href='adminBeneficiartList';";
 		jsScript +="</script>";
 		
 		HttpHeaders responseHeaders = new HttpHeaders();

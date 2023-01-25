@@ -71,7 +71,6 @@
 		</set>
 		WHERE
 				BENEFICIART_CD = #{beneficiartCd}
-		
 	</update>
 	
 	<delete id="deleteBeneficiart" parameterType="int">
