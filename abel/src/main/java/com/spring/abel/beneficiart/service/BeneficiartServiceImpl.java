@@ -30,4 +30,9 @@ public class BeneficiartServiceImpl implements BeneficiartService{
 		return beneficiartDao.selectListRelatedBeneficiart(beneficiartCd);
 	}
 
+	@Override
+	public List<BeneficiartDto> getSearchBeneficiartList(Map<String, Object> searchMap) throws Exception {
+		return beneficiartDao.selectListSearchBeneficiart(searchMap);
+	}
+
 }

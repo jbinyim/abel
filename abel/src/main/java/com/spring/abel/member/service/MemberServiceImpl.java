@@ -36,6 +36,12 @@ public class MemberServiceImpl implements MemberService {
 		}
 		return null;
 	}
+
+
+	@Override
+	public int getMySponsorCnt(String memberId) throws Exception {
+		return memberDao.selectMyOrderCnt(memberId);
+	}
 	
 		
 		

@@ -41,4 +41,16 @@ public class BeneficiartController {
 		
 	}
 	
+	@RequestMapping(value="/searchBeneficiart" , method=RequestMethod.GET)
+	public ModelAndView beneficiartMore (@RequestParam Map<String,Object> searchMap)throws Exception {
+		
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("beneficiart/beneficiartList");
+		mv.addObject("beneficiartList", beneficiartService.getSearchBeneficiartList(searchMap));
+		
+		return mv;
+		
+	}
+	
 }

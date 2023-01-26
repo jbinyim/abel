@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sponsor">
+
+	<insert id="insertSponsor" parameterType="SponsorDto">
+		INSERT INTO
+			`SPONSOR` (
+				MEMBER_ID,
+				BENCEFICIARY_CD,
+				BENCEFICIARY_NM,
+				SPONSOR_AMOUNT,
+				PAYMENT_METHOD,
+				CARD_COMPANY,
+				SPONSORSHIP_MESSAGE
+			)
+		VALUES (
+				#{memberId},
+				#{beneficiartCd},
+				#{beneficiartNm},
+				#{sponsorAmount},
+				#{paymentMethod},
+				#{cardCompany},
+				#{sponsorshipMessage}
+		)
+	
+	</insert>
+	
+	<select id="selectOneSponsor" parameterType="String " resultType="MemberDto">
+		SELECT
+				*
+		FROM
+				MEMBER
+		WHERE
+				MEMBER_ID = #{memberId}
+	
+	</select>
+	
+	<select id="selectOneMyPageBeneficiart" parameterType="int" resultType="BeneficiartDto">
+		SELECT
+				*
+		FROM
+				BENEFICIART
+		WHERE
+				BENEFICIART_CD = #{beneficiartCd}
+	</select>
+	
+	<update id="updateMemberPoint" parameterType="hashMap">
+		UPDATE
+				MEMBER
+		SET
+				POINT = POINT + #{potint}
+		WHERE
+				MEMBER_ID = #{memberId}
+	
+	</update>
+
+</mapper>

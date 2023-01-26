@@ -31,5 +31,19 @@
 				BENEFICIART_CD = #{beneficiartCd}
 	          		       
 	</select>
+	
+	<select id="selectListSearchBeneficiart" parameterType="int" resultType="BeneficiartDto">
+	
+		<if test='method == "search"'>
+			SELECT
+					*
+			FROM
+					BENEFICIART
+			WHERE
+					BENEFICIART_CD	LIKE CONCAT('%' , #{word} , '%') OR
+					BENEFICIART_NM	LIKE CONCAT('%' , #{word} , '%')
+		</if>
+	
+	</select>
 
 </mapper>

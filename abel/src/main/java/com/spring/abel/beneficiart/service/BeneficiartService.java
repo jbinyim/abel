@@ -9,5 +9,6 @@ public interface BeneficiartService {
 	public List<BeneficiartDto> getBeneficiartList(Map<String,String> beneficiartMap) throws Exception;
 	public BeneficiartDto getBeneficiartDetail (int beneficiartCd) throws Exception;
 	public BeneficiartDto getRelatedBeneficiartList (int beneficiartCd) throws Exception;
+	public List<BeneficiartDto> getSearchBeneficiartList(Map<String,Object> searchMap) throws Exception;
 
 }

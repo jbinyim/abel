@@ -10,5 +10,6 @@ public interface BeneficiartDao {
 	public List<BeneficiartDto> selectBeneficiartList(Map<String,String> beneficiartMap) throws Exception;
 	public BeneficiartDto selectBeneficiart(int beneficiartCd) throws Exception;
 	public BeneficiartDto selectListRelatedBeneficiart (int beneficiartCd) throws Exception;
+	public List<BeneficiartDto> selectListSearchBeneficiart(Map<String,Object> searchMap) throws Exception;
 	
 }

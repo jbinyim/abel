@@ -5,6 +5,11 @@
 <html>
 <head>
 <meta charset="utf-8">
+<style>
+	.single-input-primary{display: inline;}
+	#design{background-color:#33cc99;}
+	#design2{background-color:#33cc99; margin:0 auto;}
+</style>
 </head>
 <body>
 
@@ -21,6 +26,35 @@
         </div>
     </div>
     <!-- bradcam_area_end  -->
+    
+    <div class="whole-wrap">
+		<div class="container box_1170">
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-md-3">
+						<img src="img/elements/d.jpg" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-lg-8 col-md-8">
+						<form action="${contextPath }/beneficiart/searchBeneficiart" method="get">
+							<div class="mt-10">
+								<h4>* 검색하기</h4>
+								<input type="text" name="word" placeholder="검색어를 입력하세요."
+									onfocus="this.placeholder = ''" onblur="this.placeholder = '검색어를 입력하세요.'" required
+									class="single-input">
+									<input type="hidden" name="method" value="search">
+									<input type="submit" id="design2" value="검색" onclick="execDaumPostcode();" style="width: 10%; padding-left: 0" class="genric-btn info radius">
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
 
     <!-- popular_causes_area_start  -->
     <div class="popular_causes_area pt-120">
@@ -66,65 +100,5 @@
     <!-- popular_causes_area_end  -->
 
 
-    <div data-scroll-index='1' class="make_donation_area section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section_title text-center mb-55">
-                        <h3><span>바로 후원하기</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <form action="#" class="donation_form">
-                        <div class="row align-items-center">
-                            <div class="col-md-4">
-                                <div class="single_amount">
-                                    <div class="input_field">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                              <span class="input-group-text" id="basic-addon1">원</span>
-                                            </div>
-                                            <input type="text" class="form-control" placeholder="40,200" aria-label="Username" aria-describedby="basic-addon1">
-                                          </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="single_amount">
-                                   <div class="fixed_donat d-flex align-items-center justify-content-between">
-                                       <div class="select_prise">
-                                           <h4>Select Amount:</h4>
-                                       </div>
-                                        <div class="single_doonate"> 
-                                            <input type="radio" id="blns_1" name="radio-group" checked>
-                                            <label for="blns_1">10</label>
-                                        </div>
-                                        <div class="single_doonate"> 
-                                            <input type="radio" id="blns_2" name="radio-group" checked>
-                                            <label for="blns_2">30</label>
-                                        </div>
-                                        <div class="single_doonate"> 
-                                            <input type="radio" id="Other" name="radio-group" checked>
-                                            <label for="Other">Other</label>
-                                        </div>
-                                   </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="donate_now_btn text-center">
-                        <a href="#" class="boxed-btn4">후원하기</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
 </body>
 </html>

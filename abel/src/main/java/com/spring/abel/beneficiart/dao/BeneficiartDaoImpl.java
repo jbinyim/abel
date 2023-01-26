@@ -29,6 +29,11 @@ public class BeneficiartDaoImpl implements BeneficiartDao{
 	public BeneficiartDto selectListRelatedBeneficiart(int beneficiartCd) throws Exception {
 		return sqlSession.selectOne("beneficiart.selectRelatedBeneficiartList" , beneficiartCd);
 	}
+
+	@Override
+	public List<BeneficiartDto> selectListSearchBeneficiart(Map<String, Object> searchMap) throws Exception {
+		return sqlSession.selectList("beneficiart.selectListSearchBeneficiart" , searchMap);
+	}
 	
 	
 
