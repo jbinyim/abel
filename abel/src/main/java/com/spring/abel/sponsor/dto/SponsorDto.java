@@ -13,7 +13,36 @@ public class SponsorDto {
 	private String paymentMethod;
 	private String cardCompany;
 	private String sponsorShipMessage;
+	private String sponsorHp;
+	private String payHp;
+	private String sponsorNm;
+	private int sponsorBeneficiartQty;
 	
+	
+	public int getSponsorBeneficiartQty() {
+		return sponsorBeneficiartQty;
+	}
+	public void setSponsorBeneficiartQty(int sponsorBeneficiartQty) {
+		this.sponsorBeneficiartQty = sponsorBeneficiartQty;
+	}
+	public String getSponsorHp() {
+		return sponsorHp;
+	}
+	public void setSponsorHp(String sponsorHp) {
+		this.sponsorHp = sponsorHp;
+	}
+	public String getPayHp() {
+		return payHp;
+	}
+	public void setPayHp(String payHp) {
+		this.payHp = payHp;
+	}
+	public String getSponsorNm() {
+		return sponsorNm;
+	}
+	public void setSponsorNm(String sponsorNm) {
+		this.sponsorNm = sponsorNm;
+	}
 	public long getSponsorCd() {
 		return sponsorCd;
 	}

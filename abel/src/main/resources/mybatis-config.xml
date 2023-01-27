@@ -11,6 +11,7 @@
 		<typeAlias type="com.spring.abel.member.dto.MemberDto" alias="MemberDto"/>
 		<typeAlias type="com.spring.abel.beneficiart.dto.BeneficiartDto" alias="BeneficiartDto"/>
 		<typeAlias type="com.spring.abel.admin.member.dto.AdminMemberDto" alias="AdminMemberDto"/>
+		<typeAlias type="com.spring.abel.sponsor.dto.SponsorDto" alias="SponsorDto"/>
 	</typeAliases>
 	
 </configuration>

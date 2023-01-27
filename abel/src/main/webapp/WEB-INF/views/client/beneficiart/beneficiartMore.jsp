@@ -6,6 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+
+function processToCart(goodsCd) {
+	
+	if ("${sessionId == null}" == "true") {
+		alert("로그인을 진행해주세요.");
+		location.href = "${contextPath }/member/login";
+		}
+	}
+
+</script>
 </head>
 <body>
  <!-- bradcam_area_start  -->

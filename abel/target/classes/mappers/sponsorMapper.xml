@@ -12,7 +12,11 @@
 				SPONSOR_AMOUNT,
 				PAYMENT_METHOD,
 				CARD_COMPANY,
-				SPONSORSHIP_MESSAGE
+				SPONSORSHIP_MESSAGE,
+				SPONSOR_HP,
+				PAY_HP,
+				SPONSOR_NM,
+				SPONSOR_BENEFICIART_QTY
 			)
 		VALUES (
 				#{memberId},
@@ -21,12 +25,16 @@
 				#{sponsorAmount},
 				#{paymentMethod},
 				#{cardCompany},
-				#{sponsorShipMessage}
+				#{sponsorShipMessage},
+				#{sponsorHp},
+				#{payHp},
+				#{sponsorNm},
+				#{sponsorBeneficiartQty}
 		)
 	
 	</insert>
 	
-	<select id="selectOneSponsor" parameterType="String " resultType="MemberDto">
+	<select id="selectOneSponsor" parameterType="String" resultType="MemberDto">
 		SELECT
 				*
 		FROM

@@ -15,7 +15,14 @@ public class MemberDto {
 	private String roadAddress;
 	private String jibunAddress;
 	private String namujiAddress;
+	private int point;
 	
+	public int getPoint() {
+		return point;
+	}
+	public void setPoint(int point) {
+		this.point = point;
+	}
 	public String getMemberId() {
 		return memberId;
 	}

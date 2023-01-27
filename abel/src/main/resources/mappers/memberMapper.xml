@@ -19,7 +19,8 @@
 				#{zipcode},
 				#{roadAddress},
 				#{jibunAddress},
-				#{namujiAddress}
+				#{namujiAddress},
+				#{point}
 		)
 	</insert>
 	
