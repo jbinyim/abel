@@ -18,6 +18,7 @@ import com.spring.abel.sponsor.dto.SponsorDto;
 import com.spring.abel.sponsor.service.SponsorService;
 
 @Controller
+@RequestMapping("/sponsor")
 public class SponsorController {
 
 	@Autowired
@@ -29,7 +30,7 @@ public class SponsorController {
 	public ModelAndView sponsorBeneficiart(@RequestParam("beneficiartCd") int beneficiartCd , HttpServletRequest request) throws Exception{
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("beneficiart/sponsorBeneficiart");
+		mv.setViewName("sponsor/sponsorBeneficiart");
 		HttpSession session = request.getSession();
 		
 		mv.addObject("sponsor", sponsorService.getSponsorDetail((String)session.getAttribute("memberId")));
@@ -40,7 +41,7 @@ public class SponsorController {
 	}
 	
 	@RequestMapping(value="/sponsorBeneficiart" , method=RequestMethod.POST)
-	public ResponseEntity<Object> sponsorBeneficiart(SponsorDto sponsorDto , @RequestParam("poin") int point , HttpServletRequest request) throws Exception{
+	public ResponseEntity<Object> sponsorBeneficiart(SponsorDto sponsorDto , @RequestParam("point") int point , HttpServletRequest request) throws Exception{
 		
 		sponsorService.addSponsor(sponsorDto , point);
 		

@@ -7,8 +7,8 @@
 		INSERT INTO
 			`SPONSOR` (
 				MEMBER_ID,
-				BENCEFICIARY_CD,
-				BENCEFICIARY_NM,
+				BENEFICIART_CD,
+				BENEFICIART_NM,
 				SPONSOR_AMOUNT,
 				PAYMENT_METHOD,
 				CARD_COMPANY,
@@ -21,7 +21,7 @@
 				#{sponsorAmount},
 				#{paymentMethod},
 				#{cardCompany},
-				#{sponsorshipMessage}
+				#{sponsorShipMessage}
 		)
 	
 	</insert>
