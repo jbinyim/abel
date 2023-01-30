@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 <script>
 
-function processToCart(goodsCd) {
+function processToCart(beneficiartCd) {
 	
-	if ("${sessionId == null}" == "true") {
+	if ("${memberId == null}" == "true") {
 		alert("로그인을 진행해주세요.");
 		location.href = "${contextPath }/member/login";
 		}

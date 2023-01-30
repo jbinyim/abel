@@ -21,7 +21,7 @@
 		else {
 			$("#cardCompany").hide();
 			$("#payHp").show();
-			$("[name='payHp']").val("${sponsorDto.sponsorHp }");
+			$("[name='payHp']").val();
 		}
 		
 	}
@@ -113,7 +113,7 @@
 							</div>
 							<div class="mt-10">
 								<p>후원 메세지</p>
-								<input type="text" name="sponsorshipMessage" placeholder="후원메세지입력하세요."
+								<input type="text" name="sponsorShipMessage" placeholder="후원메세지입력하세요."
 									onfocus="this.placeholder = ''"  required class="single-input">
 							</div>
 							<div>

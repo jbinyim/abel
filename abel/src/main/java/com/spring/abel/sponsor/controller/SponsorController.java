@@ -48,7 +48,7 @@ public class SponsorController {
 		
 		String jsScript= "<script>";
 		jsScript += " alert('후원해주셔서 감사합니다.');";
-		jsScript +=" location.href='" + request.getContextPath() + "/beneficiart/beneficiartMore?goodsCd=" + sponsorDto.getBeneficiartCd()+"';";
+		jsScript += " location.href='" + request.getContextPath() + "/main';";
 		jsScript +="</script>";
 		
 		HttpHeaders responseHeaders = new HttpHeaders();
