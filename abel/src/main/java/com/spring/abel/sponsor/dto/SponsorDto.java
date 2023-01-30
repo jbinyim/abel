@@ -13,23 +13,15 @@ public class SponsorDto {
 	private String paymentMethod;
 	private String cardCompany;
 	private String sponsorShipMessage;
-	private String sponsorHp;
 	private String payHp;
 	private String sponsorNm;
-	private int sponsorBeneficiartQty;
 	
 	
-	public int getSponsorBeneficiartQty() {
-		return sponsorBeneficiartQty;
+	public String getMemberId() {
+		return memberId;
 	}
-	public void setSponsorBeneficiartQty(int sponsorBeneficiartQty) {
-		this.sponsorBeneficiartQty = sponsorBeneficiartQty;
-	}
-	public String getSponsorHp() {
-		return sponsorHp;
-	}
-	public void setSponsorHp(String sponsorHp) {
-		this.sponsorHp = sponsorHp;
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
 	}
 	public String getPayHp() {
 		return payHp;
@@ -48,12 +40,6 @@ public class SponsorDto {
 	}
 	public void setSponsorCd(long sponsorCd) {
 		this.sponsorCd = sponsorCd;
-	}
-	public String getMemberId() {
-		return memberId;
-	}
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
 	}
 	public int getBeneficiartCd() {
 		return beneficiartCd;
@@ -94,10 +80,12 @@ public class SponsorDto {
 	
 	@Override
 	public String toString() {
-		return "SponsorDto [sponsorCd=" + sponsorCd + ", memberId=" + memberId + ", beneficiartCd=" + beneficiartCd
-				+ ", beneficiartNm=" + beneficiartNm + ", sponsorAmount=" + sponsorAmount + ", paymentMethod="
-				+ paymentMethod + ", cardCompany=" + cardCompany + ", sponsorShipMessage=" + sponsorShipMessage + "]";
+		return "SponsorDto [sponsorCd=" + sponsorCd + ", beneficiartCd=" + beneficiartCd + ", beneficiartNm="
+				+ beneficiartNm + ", sponsorAmount=" + sponsorAmount + ", paymentMethod=" + paymentMethod
+				+ ", cardCompany=" + cardCompany + ", sponsorShipMessage=" + sponsorShipMessage + ", payHp=" + payHp
+				+ ", sponsorNm=" + sponsorNm + "]";
 	}
+	
 	
 	
 	

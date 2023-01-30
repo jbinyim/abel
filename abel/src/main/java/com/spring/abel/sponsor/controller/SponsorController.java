@@ -41,15 +41,13 @@ public class SponsorController {
 	}
 	
 	@RequestMapping(value="/sponsorBeneficiart" , method=RequestMethod.POST)
-	public ResponseEntity<Object> sponsorBeneficiart(SponsorDto sponsorDto , @RequestParam("point") int point , HttpServletRequest request) throws Exception{
+	public ResponseEntity<Object> sponsorBeneficiart(SponsorDto sponsorDto , HttpServletRequest request) throws Exception{
 		
-		sponsorService.addSponsor(sponsorDto , point);
+		sponsorService.addSponsor(sponsorDto);
 		
-		HttpSession session = request.getSession();
-		session.setAttribute("mySponsorCnt", memberService.getMySponsorCnt(sponsorDto.getMemberId()));
 		
 		String jsScript= "<script>";
-		jsScript += " alert('상품을 주문하였습니다.');";
+		jsScript += " alert('후원해주셔서 감사합니다.');";
 		jsScript +=" location.href='" + request.getContextPath() + "/beneficiart/beneficiartMore?goodsCd=" + sponsorDto.getBeneficiartCd()+"';";
 		jsScript +="</script>";
 		

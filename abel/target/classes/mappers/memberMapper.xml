@@ -35,13 +35,5 @@
 	
 	</select>
 
-	<select id="selectMyOrderCnt" resultType="int" parameterType="String">
-	  		SELECT
-	  				COUNT(*)
-	  		FROM
-	  				`ORDER`
-	  		WHERE
-	  				MEMBER_ID = #{memberId}
-  	</select>
 
 </mapper>

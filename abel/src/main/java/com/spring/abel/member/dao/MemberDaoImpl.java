@@ -24,10 +24,6 @@ public class MemberDaoImpl implements MemberDao{
 	}
 
 
-	@Override
-	public int selectMyOrderCnt(String memberId) throws Exception {
-		return sqlSession.selectOne("member.selectMyOrderCnt" , memberId);
-	}
 
 
 }

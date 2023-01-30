@@ -15,5 +15,9 @@
 		<put-attribute name="body" value="/WEB-INF/views/admin/beneficiart/adminBeneficiartDetail.jsp" />
 		<put-attribute name="title" value="수헤자 수정" />
 	</definition>
+	<definition name="admin/beneficiart/adminSpecialList" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/admin/beneficiart/adminSpecialList.jsp" />
+		<put-attribute name="title" value="기념일후원 목록" />
+	</definition>
 
 </tiles-definitions>

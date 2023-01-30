@@ -13,10 +13,8 @@
 				PAYMENT_METHOD,
 				CARD_COMPANY,
 				SPONSORSHIP_MESSAGE,
-				SPONSOR_HP,
 				PAY_HP,
-				SPONSOR_NM,
-				SPONSOR_BENEFICIART_QTY
+				SPONSOR_NM
 			)
 		VALUES (
 				#{memberId},
@@ -26,10 +24,8 @@
 				#{paymentMethod},
 				#{cardCompany},
 				#{sponsorShipMessage},
-				#{sponsorHp},
 				#{payHp},
-				#{sponsorNm},
-				#{sponsorBeneficiartQty}
+				#{sponsorNm}
 		)
 	
 	</insert>
@@ -53,14 +49,5 @@
 				BENEFICIART_CD = #{beneficiartCd}
 	</select>
 	
-	<update id="updateMemberPoint" parameterType="hashMap">
-		UPDATE
-				MEMBER
-		SET
-				POINT = POINT + #{potint}
-		WHERE
-				MEMBER_ID = #{memberId}
-	
-	</update>
 
 </mapper>

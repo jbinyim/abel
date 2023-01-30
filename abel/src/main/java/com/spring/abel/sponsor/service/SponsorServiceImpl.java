@@ -21,13 +21,11 @@ public class SponsorServiceImpl implements SponsorService{
 	
 	@Override
 	@Transactional
-	public void addSponsor(SponsorDto sponsorDto , int point) throws Exception {
+	public void addSponsor(SponsorDto sponsorDto) throws Exception {
 		Map<String, Object> sponsorMap = new HashMap<String, Object>();
-		sponsorMap.put("point" , point);
 		sponsorMap.put("beneficiartCd" , sponsorDto.getBeneficiartCd());
 		sponsorMap.put("memberId" , sponsorDto.getMemberId());
 		
-		sponsorDao.updateMemberPoint(sponsorMap);
 		sponsorDao.insertSponsor(sponsorDto);
 	}
 
