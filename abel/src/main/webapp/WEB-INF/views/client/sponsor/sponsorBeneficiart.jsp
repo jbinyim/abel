@@ -11,20 +11,38 @@
 </style>
 <script>
 
-	function setPayMethod(){
+$(function(){
+	
+	$("[name='payMethod']").change(function(){
 		
-		var method = $("[name='paymentMethod']").val();
-		if (method == 'card') {
-			$("#cardCompany").show();
-			$("#payHp").hide();
+		var keyword = $("[name='payMethod']:checked").val();
+		var setView = "";
+		
+		if (keyword == "phone") {
+			
+			setView = "핸드폰 번호 : ";
+			setView += "<select>";
+			setView += "<option value='010'>010</option>";
+			setView += "<option value='017'>017</option>";
+			setView += "<option value='018'>018</option>";
+			setView += "<option value='019'>019</option>";
+			setView += "</select> - " 
+			setView += "<input type='text' size='10'> - "; 
+			setView += "<input type='text' size='10'>"; 
+			setView += "</select>"
 		}
 		else {
-			$("#cardCompany").hide();
-			$("#payHp").show();
-			$("[name='payHp']").val();
+			setView = "카드번호 : <input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
+			setView += "<input type='text' size='10'> ";
 		}
+		$("#target").html(setView);
 		
-	}
+	});
+	
+	
+});
 
 </script>
 </head>
@@ -84,26 +102,21 @@
 								<input type="text" name="sponsorNm" placeholder="후원자 이름 입력하세요."
 									onfocus="this.placeholder = ''"  required class="single-input">
 							</div>
-							<div class="mt-10">
-								<p>지불 방법</p>
-								<select name="paymentMethod">
-										<option value="card">카드결제</option>
-										<option value="phone">핸드폰 결제</option>
-								</select>
-							</div>
-							<div id="cardCompany" class="mt-10">
-								<p>카드 회사</p>
-								<select name="cardCompany">
-										<option value="삼성">삼성</option>
-										<option value="하나SK">하나SK</option>
-										<option value="현대">현대</option>
-										<option value="KB">KB</option>
-										<option value="신한">신한</option>
-										<option value="롯데">롯데</option>
-										<option value="BC">BC</option>
-										<option value="시티">시티</option>
-										<option value="NH농협">NH농협</option>
-								   </select>
+							<p>
+								<input type="radio" name=payMethod value="card" checked > 신용카드	
+								<input type="radio" name="payMethod" value="phone"> 휴대폰 결제
+							</p>
+							<div>
+							<p id="target">
+								<select id="hp1" >
+									<option value="010">010</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> - 
+								<input type="text" size="10"> - 
+								<input type="text" size="10">
+							</p>
 							</div>
 							<div id="payHp" class="mt-10">
 								<p>핸드폰 결제</p>
