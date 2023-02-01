@@ -41,7 +41,7 @@
 		                                <a href="${contextPath }/member/logout">
 		                                    <i>로그아웃</i>
 		                                </a>
-		                                <a href="#">
+		                                <a href="${contextPath }/myPage/myInfo?memberId=${sessionScope.memberId }">
 		                                    <i>회원정보 수정</i>
 		                                </a>
 		                            </c:otherwise>

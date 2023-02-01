@@ -115,6 +115,11 @@
 									class="single-input-accent">
 							</div>
 							<div class="mt-10">
+								<input type="text" name="jibunAddress" placeholder="지번주소를 입력하세요."
+									onfocus="this.placeholder = ''" onblur="this.placeholder = '지번주소를 입력하세요.'"
+									required class="single-input-secondary">
+							</div>
+							<div class="mt-10">
 								<input type="text" name="namujiAddress" placeholder="상세주소를 입력하세요."
 									onfocus="this.placeholder = ''" onblur="this.placeholder = '상세주소를 입력하세요.'"
 									required class="single-input-secondary">

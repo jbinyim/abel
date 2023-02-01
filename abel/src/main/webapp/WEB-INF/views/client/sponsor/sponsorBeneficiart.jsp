@@ -102,10 +102,13 @@ $(function(){
 								<input type="text" name="sponsorNm" placeholder="후원자 이름 입력하세요."
 									onfocus="this.placeholder = ''"  required class="single-input">
 							</div>
-							<p>
-								<input type="radio" name=payMethod value="card" checked > 신용카드	
-								<input type="radio" name="payMethod" value="phone"> 휴대폰 결제
-							</p>
+							<div class="mt-10 single_doonate">
+								<p>결제 방법</p>
+                                    <input class="form-control" type="radio"  id="card" name="payMethod" value="card" > &emsp;
+                                    <label for="card">카드결제</label>
+                                    <input class="form-control" type="radio" id="phone" name="payMethod" value="phone"> &emsp;
+                                    <label for="phone">핸드폰결제</label>
+                            </div>
 							<div>
 							<p id="target">
 								<select id="hp1" >
@@ -117,12 +120,6 @@ $(function(){
 								<input type="text" size="10"> - 
 								<input type="text" size="10">
 							</p>
-							</div>
-							<div id="payHp" class="mt-10">
-								<p>핸드폰 결제</p>
-								<input type="text" name="payHp" placeholder="핸드폰 번호 입력하세요."
-									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
-									class="single-input">
 							</div>
 							<div class="mt-10">
 								<p>후원 메세지</p>

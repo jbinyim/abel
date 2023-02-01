@@ -56,9 +56,9 @@
 								</div>
 								<div class="mt-10 single_doonate">
 									<p>수혜자 성별</p>
-	                                    <input class="form-control" type="radio"  id="m" name="beneficiartSex" value="m" value="${beneficiaratDto.beneficiartSex }"> &emsp;
+	                                    <input class="form-control" type="radio"  id="m" name="beneficiartSex" value="m" <c:if test="${beneficiaratDto.beneficiartSex eq 'm'}">checked</c:if>> &emsp;
 	                                    <label for="m">남</label>
-	                                    <input class="form-control" type="radio"  id="f" name="beneficiartSex" value="f" value="${beneficiaratDto.beneficiartSex }"> &emsp;
+	                                    <input class="form-control" type="radio"  id="f" name="beneficiartSex" value="f" <c:if test="${beneficiaratDto.beneficiartSex eq 'f'}">checked</c:if>> &emsp;
 	                                    <label for="f">여</label>
 	                            </div>
 								<div class="mt-10">
