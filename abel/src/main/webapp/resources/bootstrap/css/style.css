@@ -4416,8 +4416,8 @@ h6 {
 
 /* line 515, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_elements.scss */
 .single-input {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 85%;
   line-height: 40px;
   border: none;
   outline: none;

@@ -85,7 +85,7 @@ function processToCart(beneficiartCd) {
             <div class="row">
                 <div class="col-12">
                     <div class="donate_now_btn text-center">
-                        <a href="${contextPath }/sponsor/sponsorBeneficiart?beneficiartCd=${beneficiartDto.beneficiartCd}" class="boxed-btn4">바로 후원하기</a>
+                        <a href="${contextPath }/sponsor/sponsorBeneficiart?beneficiartCd=${beneficiartDto.beneficiartCd}" class="boxed-btn4" onclick="processToCart">바로 후원하기</a>
                     </div>
                 </div>
 

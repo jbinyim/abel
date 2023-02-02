@@ -63,5 +63,32 @@
 				MEMBER_ID = #{memberId}
 	</delete>
 	
+	<resultMap type="hashmap" id="mySponsorListMap">
+		<result column="SPONSOR_CD" property="sponsorCd"/>
+		<result column="MEMBER_ID" property="memberId"/>
+		<result column="SPONSOR_AMOUNT" property="sponsorAmount"/>
+		<result column="BENEFICIART_CD" property="beneficiartCd"/>
+		<result column="BENEFICIART_NM" property="beneficiartNm"/>
+		<result column="CONTRIBUTION" property="contribution"/>
+		<result column="BENEFICIART_FILE_NAME" property="beneficiartFileName"/>
+	</resultMap>
+	
+	<select id="selectListMySponsor" parameterType="String" resultMap="mySponsorListMap">
+		SELECT
+				S.SPONSOR_CD				AS SPONSOR_CD,
+				S.MEMBER_ID					AS MEMBER_ID,
+				S.SPONSOR_AMOUNT			AS SPONSOR_AMOUNT,
+				B.BENEFICIART_CD			AS BENEFICIART_CD,
+				B.BENEFICIART_NM			AS BENEFICIART_NM,
+				B.CONTRIBUTION				AS CONTRIBUTION,
+				B.BENEFICIART_FILE_NAME		AS BENEFICIART_FILE_NAME
+		FROM
+				`SPONSOR` S
+		 JOIN BENEFICIART B
+		 			   ON S.BENEFICIART_CD = B.BENEFICIART_CD
+		 			  AND S.MEMBER_ID = #{memberId}
+		
+	</select>
+	
 
 </mapper>

@@ -70,4 +70,17 @@ public class MyPageController {
 		
 	}
 	
+	@RequestMapping(value="/mySponsorList" , method=RequestMethod.GET)
+	public ModelAndView mySponsorList(HttpServletRequest request) throws Exception {
+		
+		HttpSession session = request.getSession();
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("myPage/mySponsorList");
+		mv.addObject("mySponsorList" , myPageService.getMySponsorList((String)session.getAttribute("memberId")));
+		
+		
+		return mv;
+		
+	}
+	
 }

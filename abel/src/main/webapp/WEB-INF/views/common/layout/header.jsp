@@ -42,7 +42,7 @@
 		                                    <i>로그아웃</i>
 		                                </a>
 		                                <a href="${contextPath }/myPage/myInfo?memberId=${sessionScope.memberId }">
-		                                    <i>회원정보 수정</i>
+		                                    <i>마이페이지</i>
 		                                </a>
 		                            </c:otherwise>
                                 </c:choose>

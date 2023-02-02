@@ -13,16 +13,6 @@
 </style>
 <script>
 
-	$().ready(function() {
-		
-		$("form").submit(function(){
-					
-					var dateBirth = $("#birthY").val() + "-" + $("#birthM").val() + "-" + $("#birthD").val();
-					$("[name='dateBirth']").val(dateBirth);
-					
-			});
-		
-	}
 
 </script>
 </head>

@@ -94,7 +94,7 @@ $(function(){
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30">후원 상세</h3>
 						<form action="${contextPath }/sponsor/sponsorBeneficiart" method="post">
-							<input type="hidden" name="memberId" value="${orderer.memberId}">
+							<input type="hidden" name="memberId" value="${sponsorDto.memberId}">
 							<input type="hidden" name="beneficiartCd" value="${beneficiartDto.beneficiartCd }">
 							<input type="hidden" name="point" value="${beneficiartDto.point}">
 							<div class="mt-10">

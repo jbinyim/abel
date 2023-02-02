@@ -1,5 +1,8 @@
 package com.spring.abel.myPage.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -25,6 +28,11 @@ public class MyPageDaoImpl implements MyPageDao {
 	@Override
 	public void deleteMember(String memberId) throws Exception {
 		sqlSession.delete("myPage.deleteMember" , memberId);
+	}
+
+	@Override
+	public List<Map<String, Object>> selectListMySponsor(String memberId) throws Exception {
+		return sqlSession.selectList("myPage.selectListMySponsor" , memberId);
 	}
 
 }
