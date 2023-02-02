@@ -13,25 +13,18 @@
 
 $(function(){
 	
-	$("[name='payMethod']").change(function(){
+	$("[name='paymentMethod']").change(function(){
 		
-		var keyword = $("[name='payMethod']:checked").val();
+		var keyword = $("[name='paymentMethod']:checked").val();
 		var setView = "";
 		
 		if (keyword == "phone") {
 			
 			setView = "핸드폰 번호 : ";
-			setView += "<select>";
-			setView += "<option value='010'>010</option>";
-			setView += "<option value='017'>017</option>";
-			setView += "<option value='018'>018</option>";
-			setView += "<option value='019'>019</option>";
-			setView += "</select> - " 
-			setView += "<input type='text' size='10'> - "; 
-			setView += "<input type='text' size='10'>"; 
-			setView += "</select>"
+			setView += "<input type='text' size='20'>"; 
 		}
 		else {
+			
 			setView = "카드번호 : <input type='text' size='10'> ";
 			setView += "<input type='text' size='10'> ";
 			setView += "<input type='text' size='10'> ";
@@ -94,7 +87,7 @@ $(function(){
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30">후원 상세</h3>
 						<form action="${contextPath }/sponsor/sponsorBeneficiart" method="post">
-							<input type="hidden" name="memberId" value="${sponsorDto.memberId}">
+							<input type="hidden" name="memberId" value="${sponsor.memberId}">
 							<input type="hidden" name="beneficiartCd" value="${beneficiartDto.beneficiartCd }">
 							<input type="hidden" name="point" value="${beneficiartDto.point}">
 							<div class="mt-10">
@@ -104,21 +97,14 @@ $(function(){
 							</div>
 							<div class="mt-10 single_doonate">
 								<p>결제 방법</p>
-                                    <input class="form-control" type="radio"  id="card" name="payMethod" value="card" > &emsp;
+                                    <input class="form-control" type="radio"  id="card" name="paymentMethod" value="card" > &emsp;
                                     <label for="card">카드결제</label>
-                                    <input class="form-control" type="radio" id="phone" name="payMethod" value="phone"> &emsp;
+                                    <input class="form-control" type="radio" id="phone" name="paymentMethod" value="phone"> 
                                     <label for="phone">핸드폰결제</label>
                             </div>
 							<div>
 							<p id="target">
-								<select id="hp1" >
-									<option value="010">010</option>
-									<option value="017">017</option>
-									<option value="018">018</option>
-									<option value="019">019</option>
-								</select> - 
-								<input type="text" size="10"> - 
-								<input type="text" size="10">
+								<input type="text" name="payHp">
 							</p>
 							</div>
 							<div class="mt-10">
@@ -126,8 +112,19 @@ $(function(){
 								<input type="text" name="sponsorShipMessage" placeholder="후원메세지입력하세요."
 									onfocus="this.placeholder = ''"  required class="single-input">
 							</div>
+							<div class="mt-10">
+								<p>수혜자 이름</p>
+								<input type="text" name="beneficiartNm" value="${beneficiartDto.beneficiartNm }" readonly
+									onfocus="this.placeholder = ''"  required class="single-input">
+							</div>
+							<div class="mt-10">
+								<p>후원금</p>
+								<input type="text" name="sponsorAmount" value="${beneficiartDto.contribution }"  readonly
+									onfocus="this.placeholder = ''"   required class="single-input">
+							</div>
+							
 							<div>
-								<button type="submit" id="design" class="genric-btn info circle">후원</button>
+								<button type="submit" id="design" class="genric-btn info circle">후원하기</button>
 							</div>
 							</form>
 						</div>

@@ -36,7 +36,7 @@
         </div>
     </div>
     <!-- bradcam_area_end  -->
-	<div class="section-top-border text-right">
+	<div class="section-top-border text-center">
 					<a href="${contextPath }/myPage/mySponsorList"><button type="submit" id="design" class="genric-btn info circle">내 후원 목록</button></a>
 					<div class="row">
 	</div>

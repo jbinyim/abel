@@ -24,7 +24,7 @@
         </div>
     </div>
     <!-- bradcam_area_end  -->
-	<div class="section-top-border text-right">
+	<div class="section-top-border text-center">
 					<a href="${contextPath }/admin/beneficiart/adminBeneficiartAdd"><button type="submit" id="design" class="genric-btn info circle">추가하기</button></a>
 					<div class="row">
 	</div>

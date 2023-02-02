@@ -39,7 +39,7 @@
 							<div class="serial">번호</div>
 							<div class="country">수혜자</div>
 							<div class="visit">후원금</div>
-							<div class="percentage">핸드폰 번호</div>
+							<div class="percentage">후원 방법</div>
 						</div>
 						<c:choose>
 							<c:when test="${empty mySponsorList }">
@@ -49,9 +49,9 @@
 								<c:forEach var="mySponsor" items="${mySponsorList }" varStatus="i">
 									<div class="table-row">
 										<div class="serial">${i.count }</div>
-										<div class="country">${memberDto.memberId }</div>
-										<div class="visit">${mySponsor.contribution }</div>
-										<div class="percentage">${memberDto.hp }</div>
+										<div class="country">${mySponsor.beneficiartNm }</div>
+										<div class="visit">${mySponsor.contribution - mySponsor.contribution * mySponsor.discountRate}원</div>
+										<div class="percentage">${mySponsor.paymentMethod }</div>
 									</div>
 								</c:forEach>
 							</c:otherwise>

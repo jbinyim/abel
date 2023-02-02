@@ -49,7 +49,7 @@
 								<c:forEach var="memberDto" items="${memberList }" varStatus="i">
 									<div class="table-row">
 										<div class="serial">${i.count }</div>
-										<div class="country">${memberDto.memberId }</div>
+										<div class="country"><a href="${contextPath }/myPage/myInfo?memberId=${memberDto.memberId}">${memberDto.memberId} </a></div>
 										<div class="visit">${memberDto.memberNm }</div>
 										<div class="percentage">${memberDto.hp }</div>
 									</div>

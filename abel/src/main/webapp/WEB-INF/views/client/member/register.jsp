@@ -76,9 +76,9 @@
 							</div>
 							<div class="mt-10 single_doonate">
 								<p>성별</p>
-                                    <input class="form-control" type="radio"  id="m" name="sex" value="m"> &emsp;
+                                    <input class="form-control" type="radio"  id="m" name="sex" value="남"> &emsp;
                                     <label for="m">남</label>
-                                    <input class="form-control" type="radio"  id="f" name="sex" value="f"> &emsp;
+                                    <input class="form-control" type="radio"  id="f" name="sex" value="여"> &emsp;
                                     <label for="f">여</label>
                             </div>
 							<div class="mt-10">

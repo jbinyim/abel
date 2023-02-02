@@ -20,7 +20,7 @@
                                 		<c:when test="${sessionScope.role eq 'admin'}">
 		                                	<li><a href="${contextPath }/admin/member/adminMemberList">회원관리</a></li>
 		                                    <li><a href="${contextPath }/admin/beneficiart/adminBeneficiartList">어린이관리</a></li>
-		                                    <li><a href="${contextPath }/admin/beneficiart/adminSpecialList">맞춤후원관리</a></li>
+		                                    <li><a href="${contextPath }/admin/sponsor/adminSponsorList">후원관리</a></li>
 		                                </c:when>
                                 	</c:choose>
                                 </ul>
