@@ -21,14 +21,22 @@ $(function(){
 		if (keyword == "phone") {
 			
 			setView = "핸드폰 번호 : ";
-			setView += "<input type='text' size='20'>"; 
+			setView += "<input type='text' size='20' name='payHp' placeholder='- 를 뺴고 입력해주세요.'>"; 
 		}
 		else {
 			
-			setView = "카드번호 : <input type='text' size='10'> ";
-			setView += "<input type='text' size='10'> ";
-			setView += "<input type='text' size='10'> ";
-			setView += "<input type='text' size='10'> ";
+			setView += "카드회사";
+			setView += "<select name='cardCompany'>";
+			setView += "<option value='삼성'>삼성</option>";
+			setView += "<option value='하나SK'>하나SK</option>";
+			setView += "<option value='현대'>현대</option>";
+			setView += "<option value='KB'>KB</option>";
+			setView += "<option value='신한'>신한</option>";
+			setView += "<option value='롯데'>롯데</option>";
+			setView += "<option value='BC'>BC</option>";
+			setView += "<option value='시티'>시티</option>";
+			setView += "<option value='NH농협'>NH농협</option>";
+			setView += "</select>"
 		}
 		$("#target").html(setView);
 		
