@@ -27,6 +27,22 @@
 
 	<!-- Start Button -->
 	<!-- End Button -->
+		<div class="whole-wrap">
+		<div class="container box_1170">
+			<div class="section-top-border">
+				<h3 class="mb-30">Left Aligned</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="${contextPath }/admin/beneficiart/thumbnails?beneficiartFileName=${beneficiartDto.beneficiartFileName}"  class="img-fluid">
+					</div>
+					<div class="col-md-9 mt-sm-20">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 	<!-- Start Align Area -->
 	<div class="whole-wrap">
@@ -37,7 +53,7 @@
 					<div class="progress-table">
 						<div class="table-head">
 							<div class="serial">번호</div>
-							<div class="country">수혜자</div>
+							<div class="country">후원정보</div>
 							<div class="visit">후원금</div>
 							<div class="percentage">후원 방법</div>
 						</div>
@@ -48,8 +64,9 @@
 							<c:otherwise>
 								<c:forEach var="mySponsor" items="${mySponsorList }" varStatus="i">
 									<div class="table-row">
-										<div class="serial">${i.count }</div>
-										<div class="country">${mySponsor.beneficiartNm }</div>
+										<div class="serial"><img src="${contextPath }/admin/beneficiart/thumbnails?beneficiartFileName=${beneficiartDto.beneficiartFileName}"  class="img-fluid"></div>
+										<div class="country"><a href="${contextPath }/beneficiart/beneficiartMore?beneficiartCd=${beneficiartDto.beneficiartCd }">
+																		${mySponsor.beneficiartNm } // ${mySponsor.sponsorShipMessage }</a></div>
 										<div class="visit">${mySponsor.contribution - mySponsor.contribution * mySponsor.discountRate}원</div>
 										<div class="percentage">${mySponsor.paymentMethod }</div>
 									</div>

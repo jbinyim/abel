@@ -34,6 +34,11 @@ public class BeneficiartDaoImpl implements BeneficiartDao{
 	public List<BeneficiartDto> selectListSearchBeneficiart(Map<String, Object> searchMap) throws Exception {
 		return sqlSession.selectList("beneficiart.selectListSearchBeneficiart" , searchMap);
 	}
+
+	@Override
+	public List<BeneficiartDto> selectListFindBeneficiart(Map<String, Object> findMap) throws Exception {
+		return sqlSession.selectList("beneficiart.selectListFindBeneficiart" , findMap);
+	}
 	
 	
 

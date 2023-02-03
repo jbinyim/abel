@@ -53,4 +53,15 @@ public class BeneficiartController {
 		
 	}
 	
+	@RequestMapping(value="/specialBeneficiart" , method=RequestMethod.GET)
+	public ModelAndView special (@RequestParam Map<String,Object> findMap) throws Exception {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("beneficiart/specialBeneficiart");
+		mv.addObject("specialBeneficiart" , beneficiartService.getFindBeneficiart(findMap));
+		
+		return mv;
+		
+	}
+	
 }

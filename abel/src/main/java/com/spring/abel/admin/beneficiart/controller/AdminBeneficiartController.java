@@ -168,22 +168,6 @@ public class AdminBeneficiartController {
 		out.close();
 	}
 	
-	@RequestMapping(value="/adminBeneficiartRemove" , method=RequestMethod.GET)
-	public ResponseEntity<Object> adminBeneficiartRemove(@RequestParam("beneficiartCd") int beneficiartCd) throws Exception {
-		
-		new File(CURR_IMAGE_REPO_PATH + beneficiartService.getBeneficiartDetail(beneficiartCd).getBeneficiartFileName()).delete();
-		adminBeneficiartService.removeBeneficiart(beneficiartCd);
-		
-		String jsScript= "<script>";
-			   jsScript += " alert('등록된 상품을 삭제하였습니다.');";
-			   jsScript +=" location.href='adminBeneficiartList';";
-			   jsScript +="</script>";
 
-		HttpHeaders responseHeaders = new HttpHeaders();
-		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
-		
-		return new ResponseEntity<Object>(jsScript, responseHeaders, HttpStatus.OK);
-		
-	}
 
 }

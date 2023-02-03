@@ -45,5 +45,20 @@
 		</if>
 	
 	</select>
+	
+	<select id="selectListFindBeneficiart" parameterType="int" resultType="BeneficiartDto">
+	
+		<if test='method == "birth"'>
+			SELECT
+					*
+			FROM
+					BENEFICIART
+			WHERE
+					
+		
+		
+		</if>
+	
+	</select>
 
 </mapper>

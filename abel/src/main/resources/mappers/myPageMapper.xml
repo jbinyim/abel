@@ -71,6 +71,8 @@
 		<result column="BENEFICIART_NM" property="beneficiartNm"/>
 		<result column="CONTRIBUTION" property="contribution"/>
 		<result column="BENEFICIART_FILE_NAME" property="beneficiartFileName"/>
+		<result column="SPONSORSHIP_MESSAGE" property="sponsorShipMessage"/>
+		<result column="PAYMENT_METHOD" property="paymentMethod"/>
 	</resultMap>
 	
 	<select id="selectListMySponsor" parameterType="String" resultMap="mySponsorListMap">
@@ -81,7 +83,10 @@
 				B.BENEFICIART_CD			AS BENEFICIART_CD,
 				B.BENEFICIART_NM			AS BENEFICIART_NM,
 				B.CONTRIBUTION				AS CONTRIBUTION,
-				B.BENEFICIART_FILE_NAME		AS BENEFICIART_FILE_NAME
+				B.BENEFICIART_FILE_NAME		AS BENEFICIART_FILE_NAME,
+				S.SPONSORSHIP_MESSAGE		AS SPONSORSHIP_MESSAGE,
+				S.PAYMENT_METHOD			AS PAYMENT_METHOD
+				
 		FROM
 				`SPONSOR` S
 		 JOIN BENEFICIART B
