@@ -21,6 +21,7 @@
 		                                	<li><a href="${contextPath }/admin/member/adminMemberList">회원관리</a></li>
 		                                    <li><a href="${contextPath }/admin/beneficiart/adminBeneficiartList">어린이관리</a></li>
 		                                    <li><a href="${contextPath }/admin/sponsor/adminSponsorList">후원관리</a></li>
+		                                    <li><a href="${contextPath }/contactList">고객샌터</a></li>
 		                                </c:when>
                                 	</c:choose>
                                 </ul>
@@ -79,7 +80,7 @@
                                                 <li><a href="${contextPath }/beneficiart/beneficiartList"">1:1 어린이후원</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">소개</a></li>
+                                        <li><a href="${contextPath }/contact">소개</a></li>
                                     </ul>
                                 </nav>
                                 <div class="Appointment">
