@@ -9,5 +9,6 @@ public interface CommonDao {
 	public void insertContact(CommonDto commonDto) throws Exception;
 	public List<CommonDto> selectListContact() throws Exception;
 	public CommonDto selectOneContact(int contactCd) throws Exception;
+	public void deleteContact(int[] deleteContactCdList) throws Exception;
 
 }

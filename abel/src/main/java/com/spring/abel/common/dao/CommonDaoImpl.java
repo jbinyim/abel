@@ -28,6 +28,11 @@ public class CommonDaoImpl implements CommonDao{
 	public CommonDto selectOneContact(int contactCd) throws Exception {
 		return sqlSession.selectOne("common.selectOneContact" , contactCd);
 	}
+
+	@Override
+	public void deleteContact(int[] deleteContactCdList) throws Exception {
+		sqlSession.delete("common.deleteContact" , deleteContactCdList);
+	}
 	
 	
 

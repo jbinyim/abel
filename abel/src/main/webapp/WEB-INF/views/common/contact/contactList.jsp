@@ -8,6 +8,26 @@
 <title>Insert title here</title>
 <script>
 
+	function removeContact() {
+		
+		
+		var contactCdList = "";
+		if (confirm("정말로 삭제하시겠습니까?")) {
+			
+			$("[name='contactCd']:checked").each(function(){
+				contactCdList += $(this).val() + ",";
+			});
+			
+			if (contactCdList == "") {
+				alert("삭제할 내역이 없습니다.");
+				return;
+			}
+			
+			location.href = "${contextPath}/removeContact?contactCdList="+contactCdList;
+		}
+		
+	}
+
 	function selectAllContact() {
 		if ($("#changeAllChoice").prop("checked")) {
 			$("[name='contactCd']").prop("checked" , true);
@@ -70,7 +90,7 @@
 							</c:otherwise>
 						</c:choose>
 						<div>
-							<button type="submit" id="style" class="genric-btn info circle">삭제하기</button>
+							<a href="javascript:removeContact();"><button type="submit" class="genric-btn info circle">삭제하기</button></a>
 						</div>
 					</div>
 				</div>

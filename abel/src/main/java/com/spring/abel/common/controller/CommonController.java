@@ -31,7 +31,7 @@ public class CommonController {
 		
 		commonService.addNewContact(commonDto);
 		String jsScript  = "<script>";
-			   jsScript += " alert('컨텍트 정보가 등록 되었습니다.');";
+			   jsScript += " alert('문의사항이 등록 되었습니다.');";
 			   jsScript += " location.href='" + request.getContextPath() + "/';";
 			   jsScript += " </script>";
 		
@@ -59,6 +59,30 @@ public class CommonController {
 		mv.addObject("commonDto", commonService.getContactDetail(contactCd));
 		
 		return mv;
+	}
+	
+	@RequestMapping(value="/removeContact" , method=RequestMethod.GET)
+	public ResponseEntity<Object> removeCart(@RequestParam("contactCdList") String contactCdList) throws Exception {
+		
+		String[] temp = contactCdList.split(",");
+		int[] deleteContactCdList = new int[temp.length];
+		
+		for (int i = 0; i < temp.length; i++) {
+			deleteContactCdList[i] = Integer.parseInt(temp[i]);
+		}
+		
+		commonService.removeContact(deleteContactCdList);
+		
+		String jsScript = "<script>";
+		jsScript += "alert('문의사항을 삭제하였습니다.'); ";
+		jsScript += "location.href='contactList'";
+		jsScript += "</script>";
+
+		HttpHeaders responseHeaders = new HttpHeaders();
+		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		
+		return new ResponseEntity<Object>(jsScript, responseHeaders, HttpStatus.OK);
+				
 	}
 	
 }

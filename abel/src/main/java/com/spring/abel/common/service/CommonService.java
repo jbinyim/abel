@@ -9,5 +9,6 @@ public interface CommonService {
 	public void addNewContact(CommonDto commonDto) throws Exception;
 	public List<CommonDto> getContactList() throws Exception;
 	public CommonDto getContactDetail(int contactCd) throws Exception;
+	public void removeContact(int[] deleteContactCdList) throws Exception;
 
 }
